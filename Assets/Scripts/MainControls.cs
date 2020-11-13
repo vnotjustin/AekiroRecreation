@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MainControls : MonoBehaviour
 {
+    public static MainControls Main;
     Animator m_Animator;
 
     public int Life;
@@ -19,9 +20,12 @@ public class MainControls : MonoBehaviour
 
     public float chargeTime = 1;
     public float timeLeft;
-   
-    
 
+
+    private void Awake()
+    {
+        Main = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -117,6 +121,11 @@ public class MainControls : MonoBehaviour
         if (Life <= 0)
             return false;
         return true;
+    }
+
+    public void Stasised() //Called when the enemy does a stasis attack on the player
+    {
+
     }
 
     public void Deflect()
