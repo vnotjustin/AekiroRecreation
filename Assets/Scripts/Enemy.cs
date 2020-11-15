@@ -12,12 +12,15 @@ namespace AEK
         {
             Normal,
             Focused,
-            Stasis
+            Stasis,
+            Unblockable, //This attack can only be dodged.
+            HitsDodge //This attack will hurt the player if its currently fallen back in the dodge.
         }
 
         public Animator Anim;
         [Space]
         public float Life;
+        float totalLife;
         public float Phase1Life;
         public float Phase2Life;
         public float Phase3Life;
@@ -54,12 +57,14 @@ namespace AEK
         void Start()
         {
             currentPhaseIndex = 0;
+            totalLife = Life;
+            StartGame();
         }
 
         public void StartGame()
         {
             allPossibleAttacks = GetAllPossibleAttacks(0);
-            StartCoroutine("Process");
+            StartCoroutine(Process());
         }
 
         // Update is called once per frame
@@ -78,67 +83,24 @@ namespace AEK
             }
 
             #region Update Life
-            if (Phase == 1)
+            float lifePerHeart = totalLife / 7;
+            int numOfFilledHearts = Mathf.FloorToInt(Life / lifePerHeart);
+            for (int i = 0; i < 7; i++)
             {
-                if (Life >= Phase1Life * 0.5f)
+                if (i <= numOfFilledHearts - 1)
                 {
-                    LRs[6].Value = (Life - Phase1Life * 0.5f) / (Phase1Life * 0.5f);
-                    LRs[5].Value = 1;
+                    LRs[i].Value = 1;
                 }
-                else if (Life > 0)
+                else if (i==numOfFilledHearts)
                 {
-                    LRs[6].Value = 0;
-                    LRs[5].Value = Life / (Phase1Life * 0.5f);
+                    LRs[i].Value = (Life % lifePerHeart) / lifePerHeart;
                 }
                 else
                 {
-                    LRs[6].Value = 0;
-                    LRs[5].Value = 0;
+                    LRs[i].Value = 0;
                 }
             }
-            else if (Phase == 2)
-            {
-                if (Life >= Phase2Life * 0.5f)
-                {
-                    LRs[4].Value = (Life - Phase2Life * 0.5f) / (Phase2Life * 0.5f);
-                    LRs[3].Value = 1;
-                }
-                else if (Life > 0)
-                {
-                    LRs[4].Value = 0;
-                    LRs[3].Value = Life / (Phase2Life * 0.5f);
-                }
-                else
-                {
-                    LRs[4].Value = 0;
-                    LRs[3].Value = 0;
-                }
-            }
-            else if (Phase == 3)
-            {
-                if (Life >= Phase3Life * 0.5f)
-                {
-                    LRs[2].Value = (Life - Phase3Life * 0.5f) / (Phase3Life * 0.5f);
-                    LRs[1].Value = 1;
-                }
-                else if (Life > 0)
-                {
-                    LRs[2].Value = 0;
-                    LRs[1].Value = Life / (Phase3Life * 0.5f);
-                }
-                else
-                {
-                    LRs[2].Value = 0;
-                    LRs[1].Value = 0;
-                }
-            }
-            else
-            {
-                if (Life > 0)
-                    LRs[0].Value = Life / Phase4Life;
-                else
-                    LRs[0].Value = 0;
-            }
+
             #endregion
 
             //Death
@@ -167,11 +129,12 @@ namespace AEK
 
         public IEnumerator Process()
         {
-            yield return ChangePhase(0);
-
-            while (true)
+            //yield return ChangePhase(0);
+            bool inGame = true;
+            while (inGame)
             {
-                
+                print("IN GAME");
+
                 if (currentPhaseIndex < phases.Length - 1)
                 {
                     float lifeToChange = phases[currentPhaseIndex + 1].lifeToTrigger;
@@ -180,15 +143,17 @@ namespace AEK
                         print("change phase");
                         currentPhaseIndex++;
                         allPossibleAttacks = GetAllPossibleAttacks(currentPhaseIndex);
+                        
                         yield return ChangePhase(currentPhaseIndex);
                         continue;
                     }
                 }
 
                 yield return new WaitForSeconds(2f);
-
+                print("done waiting");
                 EnemyAttack newAttack = PickAttack();
                 yield return StartAttack(newAttack);
+                yield return new WaitForEndOfFrame();
             }
         }
 
@@ -242,6 +207,12 @@ namespace AEK
                         break;
                     case AttackType.Stasis:
                         MainControls.Main.Stasised();
+                        break;
+                    case AttackType.Unblockable:
+                        MainControls.Main.AttackedByUnblockable();
+                        break;
+                    case AttackType.HitsDodge:
+                        MainControls.Main.AttackedAtDodgePosition();
                         break;
                 }
 
