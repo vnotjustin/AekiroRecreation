@@ -93,20 +93,40 @@ namespace AEK
             }
         }
 
-        public void ClearAni()
+        public void ClearLi()
         {
             m_Animator.SetBool("LightStrike", false);
-            m_Animator.SetBool("HeavyStrike", false);
-            m_Animator.SetBool("Block", false);
-            m_Animator.SetBool("Dodge", false);
             
+            isStrike = false;
+            canDS = false;
+        }
+
+        public void ClearHeavy()
+        {
+            m_Animator.SetBool("HeavyStrike", false);
+            isStrike = false;
+            canDS = false;
+        }
+
+        public void ClearBlock()
+        {
+            m_Animator.SetBool("Block", false);
+            isStrike = false;
+            canDS = false;
+        }
+
+        public void ClearDodge()
+        {
+            m_Animator.SetBool("Dodge", false);
             isStrike = false;
             canDS = false;
         }
 
         public void ClearDS()
         {
+            m_Animator.SetBool("Block", false);
             m_Animator.SetBool("DodgeStrike", false);
+            
             isStrike = false;
             canDS = false;
 
@@ -194,8 +214,12 @@ namespace AEK
         public void Break()
         {
             pLife--;
-            if (pLife >= 0)
+            if (pLife <= 0)
             {
+                m_Animator.SetTrigger("Death");
+                CombatControl.Main.Finished = true;
+                CombatControl.Main.DeathProtectedTime = 999f;
+                CombatControl.Main.DefeatAnim.SetTrigger("Play");
                 //dead
             }
             m_Animator.ResetTrigger("LightStrike");
