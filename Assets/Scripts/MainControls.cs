@@ -34,6 +34,7 @@ namespace AEK
         // Start is called before the first frame update
         void Start()
         {
+            pLife = 7;
             m_Animator = gameObject.GetComponent<Animator>();
             timeLeft = chargeTime;
         }
@@ -165,6 +166,16 @@ namespace AEK
         }
 
         public void Stasised() //Called when the enemy does a stasis attack on the player
+        {
+
+        }
+
+        public void AttackedByUnblockable() //Called when the enemy attacks with an unblockable (only dodgable) attack
+        {
+
+        }
+
+        public void AttackedAtDodgePosition() //Called when the enemy does an attack that will hurt the player if it is backwards(in dodge), but nothing if still at the front.
         {
 
         }
