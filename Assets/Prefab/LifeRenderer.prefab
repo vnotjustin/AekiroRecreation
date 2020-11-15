@@ -41,12 +41,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1708975246305757174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ebfedfdc98a20f4381d8c21a0baf1c9, type: 3}
+  m_Script: {fileID: 11500000, guid: b5d41e0939870b44e9c8e40c485d3d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mask: {fileID: 1708975248051548791}
-  MaxScale: 3.77
-  Value: 1
+  Mask: {fileID: 1708975246305757174}
+  MaxScale: 0
+  Value: 0
 --- !u!1 &1708975246318940401
 GameObject:
   m_ObjectHideFlags: 0

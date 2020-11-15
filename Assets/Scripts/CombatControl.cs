@@ -94,7 +94,7 @@ namespace AEK
             int a = (int)CurrentTime / 60;
             int b = (int)CurrentTime % 60;
             TimeText.text = "Time - " + a + ":" + b;
-            DamageText.text = "Damage Taken - " + (7 - MC.Main.Life);
+            DamageText.text = "Damage Taken - " + (7 - MainControls.Main.pLife);
         }
 
         public void StartGame()

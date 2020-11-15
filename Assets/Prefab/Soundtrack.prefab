@@ -40,12 +40,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3763662469192925093}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c473a9531bb0044a39a333e3d138a7, type: 3}
+  m_Script: {fileID: 11500000, guid: a30f9a3d4f1638d47af2ce55e88e0ebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Soundtrack: {fileID: 1882259353333321746, guid: e91a53c75dc7ae0438b8d1c772a69fd2, type: 3}
-  CurrentObject: {fileID: 0}
-  LoopRate: 202.5
+  Soundtrack: {fileID: 3763662469192925093}
+  CurrentObject: {fileID: 3763662469192925093}
+  LoopRate: 0
   LastLoopTime: 0
-  Endtrack: {fileID: 3408426727792355966, guid: e723975b3bf1b57449f213b8eb75b358, type: 3}
+  Endtrack: {fileID: 3763662469192925093}
   Ended: 0

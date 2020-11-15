@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8964772985616603782}
   - component: {fileID: 8964772985616603780}
   m_Layer: 0
-  m_Name: SoundObject
+  m_Name: Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,10 +41,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 8964772985616603783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a411ca014ec0e7245bb4af94f42eae4b, type: 3}
+  m_Script: {fileID: 11500000, guid: a30f9a3d4f1638d47af2ce55e88e0ebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Source: {fileID: 8964772985616603780}
+  Soundtrack: {fileID: 8964772985616603783}
+  CurrentObject: {fileID: 8964772985616603783}
+  LoopRate: 0
+  LastLoopTime: 0
+  Endtrack: {fileID: 0}
+  Ended: 0
 --- !u!82 &8964772985616603780
 AudioSource:
   m_ObjectHideFlags: 0
