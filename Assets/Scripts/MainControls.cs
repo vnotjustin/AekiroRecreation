@@ -126,10 +126,16 @@ namespace AEK
         {
             m_Animator.SetBool("Block", false);
             m_Animator.SetBool("DodgeStrike", false);
-            
             isStrike = false;
             canDS = false;
 
+        }
+
+        public void ClearHit()
+        {
+            m_Animator.SetBool("Hit", false);
+            isStrike = false;
+            canDS = false;
         }
 
         public void LiStrike()
@@ -214,6 +220,7 @@ namespace AEK
         public void Break()
         {
             pLife--;
+            m_Animator.SetBool("Hit", true);
             if (pLife <= 0)
             {
                 m_Animator.SetTrigger("Death");
