@@ -11,6 +11,7 @@ namespace AEK
 
         public int pLife;
         public int chargedHit = 2;
+        public int baseDamage = 1;
 
         public bool PCharge;
         public bool BSwing;
@@ -19,6 +20,7 @@ namespace AEK
         public bool isStrike = false;
         public bool isDeflecting = false;
         public bool reachedTime = false;
+        public bool canDS = false;
 
         public float chargeTime = 1;
         public float timeLeft;
@@ -45,7 +47,15 @@ namespace AEK
                 Dodge();
             }
 
-            if (Input.GetKey(KeyCode.Space) && !reachedTime)
+            if (canDS)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    DodgeStrike();
+                }
+            }
+
+            if (Input.GetKey(KeyCode.Space) && !reachedTime && !canDS)
             {
                 
                 PCharge = true;
@@ -68,7 +78,7 @@ namespace AEK
 
             }
 
-            if (Input.GetKeyUp(KeyCode.Space))
+            if (Input.GetKeyUp(KeyCode.Space) && !canDS)
             {
                 reachedTime = false;
                 PCharge = false;
@@ -88,7 +98,17 @@ namespace AEK
             m_Animator.SetBool("HeavyStrike", false);
             m_Animator.SetBool("Block", false);
             m_Animator.SetBool("Dodge", false);
+            
             isStrike = false;
+            canDS = false;
+        }
+
+        public void ClearDS()
+        {
+            m_Animator.SetBool("DodgeStrike", false);
+            isStrike = false;
+            canDS = false;
+
         }
 
         public void LiStrike()
@@ -96,7 +116,7 @@ namespace AEK
             m_Animator.SetBool("LightStrike", true);
             if (!BSwing)
             {
-                Enemy.Main.TakeDamage(1);
+                Enemy.Main.TakeDamage(baseDamage);
                 Debug.Log("Light Strike");
             }
             isStrike = false;
@@ -108,11 +128,21 @@ namespace AEK
             m_Animator.SetBool("HeavyStrike", true);
             if (!BSwing)
             {
-                Enemy.Main.TakeDamage(2);
+                Enemy.Main.TakeDamage(chargedHit);
                 Debug.Log("Heavy Strike");
             }
             isStrike = false;
 
+        }
+
+        public void DodgeStrike()
+        {
+            m_Animator.SetBool("DodgeStrike", true);
+            if (!BSwing)
+            {
+                Enemy.Main.TakeDamage(baseDamage);
+                Debug.Log("Dodge Strike");
+            }
         }
 
         public void Damaged()
@@ -147,6 +177,7 @@ namespace AEK
         public void Dodge()
         {
             m_Animator.SetBool("Dodge", true);
+            canDS = true;
         }
 
         public void Break()
