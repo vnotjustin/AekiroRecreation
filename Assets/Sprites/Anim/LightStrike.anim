@@ -31,18 +31,8 @@ AnimationClip:
       value: {fileID: 2221802915786664881, guid: 31da795e67a67254c98788c5a96958d2, type: 3}
     - time: 0.18333334
       value: {fileID: -7114625079533100608, guid: 31da795e67a67254c98788c5a96958d2, type: 3}
-    - time: 0.23333333
+    - time: 0.2
       value: {fileID: -3207697946579735919, guid: 31da795e67a67254c98788c5a96958d2, type: 3}
-    - time: 0.26666668
-      value: {fileID: 3080120069050066048, guid: 31da795e67a67254c98788c5a96958d2, type: 3}
-    - time: 0.3
-      value: {fileID: -567402560236469634, guid: 31da795e67a67254c98788c5a96958d2, type: 3}
-    - time: 0.33333334
-      value: {fileID: -913813646238966276, guid: 31da795e67a67254c98788c5a96958d2, type: 3}
-    - time: 0.38333333
-      value: {fileID: 6323255289343460639, guid: 31da795e67a67254c98788c5a96958d2, type: 3}
-    - time: 0.41666666
-      value: {fileID: -2613877470984030077, guid: 31da795e67a67254c98788c5a96958d2, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -69,17 +59,12 @@ AnimationClip:
     - {fileID: 2221802915786664881, guid: 31da795e67a67254c98788c5a96958d2, type: 3}
     - {fileID: -7114625079533100608, guid: 31da795e67a67254c98788c5a96958d2, type: 3}
     - {fileID: -3207697946579735919, guid: 31da795e67a67254c98788c5a96958d2, type: 3}
-    - {fileID: 3080120069050066048, guid: 31da795e67a67254c98788c5a96958d2, type: 3}
-    - {fileID: -567402560236469634, guid: 31da795e67a67254c98788c5a96958d2, type: 3}
-    - {fileID: -913813646238966276, guid: 31da795e67a67254c98788c5a96958d2, type: 3}
-    - {fileID: 6323255289343460639, guid: 31da795e67a67254c98788c5a96958d2, type: 3}
-    - {fileID: -2613877470984030077, guid: 31da795e67a67254c98788c5a96958d2, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.43333334
+    m_StopTime: 0.21666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -106,7 +91,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.41666666
+  - time: 0.2
     functionName: EndStrike
     data: 
     objectReferenceParameter: {fileID: 0}

@@ -7,7 +7,7 @@ namespace AEK
     public class MainControls : MonoBehaviour
     {
         public static MainControls Main;
-        Animator m_Animator;
+        Animator m_Animator; 
 
         public int pLife;
         public int chargedHit = 2;
@@ -21,6 +21,7 @@ namespace AEK
         public bool isDeflecting = false;
         public bool reachedTime = false;
         public bool canDS = false;
+        public bool canDam = false;
 
         public float chargeTime = 1;
         public float timeLeft;
@@ -82,7 +83,7 @@ namespace AEK
             {
                 reachedTime = false;
                 PCharge = false;
-                if (liTrue)
+                if (liTrue && !isStrike)
                 {
                     timeLeft = chargeTime;
                     LiStrike();
@@ -99,6 +100,7 @@ namespace AEK
         public void EndStrike()
         {
             isStrike = false;
+            canDam = true;
         }
 
         public void LiStrike()
@@ -106,10 +108,11 @@ namespace AEK
             m_Animator.ResetTrigger("LightStrike");
             m_Animator.SetTrigger("LightStrike");
 
-            if (!BSwing)
+            if (!BSwing && canDam)
             {
                 Enemy.Main.TakeDamage(baseDamage);
                 Debug.Log("Light Strike");
+                canDam = false;
             }
 
         }
