@@ -1,7 +1,61 @@
 fileFormatVersion: 2
 guid: 30f4444ad7b1c674c972c6b4c16191e0
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8385072171514789655
+    second: Preacher_Loop1-2-3End_0
+  - first:
+      213: -1514544988058266258
+    second: Preacher_Loop1-2-3End_1
+  - first:
+      213: 5792847361101557149
+    second: Preacher_Loop1-2-3End_2
+  - first:
+      213: 4306610821495547893
+    second: Preacher_Loop1-2-3End_3
+  - first:
+      213: 6889446471104914225
+    second: Preacher_Loop1-2-3End_4
+  - first:
+      213: 6035748738240643963
+    second: Preacher_Loop1-2-3End_5
+  - first:
+      213: 2588233639702005547
+    second: Preacher_Loop1-2-3End_6
+  - first:
+      213: -7772424368903217394
+    second: Preacher_Loop1-2-3End_7
+  - first:
+      213: -6672833400416644520
+    second: Preacher_Loop1-2-3End_8
+  - first:
+      213: 8835616256274129862
+    second: Preacher_Loop1-2-3End_9
+  - first:
+      213: 4538929254579723486
+    second: Preacher_Loop1-2-3End_10
+  - first:
+      213: 3815982003026826776
+    second: Preacher_Loop1-2-3End_11
+  - first:
+      213: 4755871881713565064
+    second: Preacher_Loop1-2-3End_12
+  - first:
+      213: -6871071797694716696
+    second: Preacher_Loop1-2-3End_13
+  - first:
+      213: -4219938922330228175
+    second: Preacher_Loop1-2-3End_14
+  - first:
+      213: 6158858999979399033
+    second: Preacher_Loop1-2-3End_15
+  - first:
+      213: 2387638592008273156
+    second: Preacher_Loop1-2-3End_16
+  - first:
+      213: 5977073846645575294
+    second: Preacher_Loop1-2-3End_17
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -23,6 +77,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -40,7 +95,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -57,6 +112,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -71,9 +127,399 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Preacher_Loop1-2-3End_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2100
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ff627c6b2cd5470800000000000000
+      internalID: 8385072171514789655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Preacher_Loop1-2-3End_1
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2100
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6550769b514bfae0800000000000000
+      internalID: -1514544988058266258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Preacher_Loop1-2-3End_2
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2100
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d648cabf3546050800000000000000
+      internalID: 5792847361101557149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Preacher_Loop1-2-3End_3
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 2100
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7681989b724cb30800000000000000
+      internalID: 4306610821495547893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Preacher_Loop1-2-3End_4
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 2100
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133e649401b3c9f50800000000000000
+      internalID: 6889446471104914225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Preacher_Loop1-2-3End_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1400
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b738858af7943c350800000000000000
+      internalID: 6035748738240643963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Preacher_Loop1-2-3End_6
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1400
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b27872248c04be320800000000000000
+      internalID: 2588233639702005547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Preacher_Loop1-2-3End_7
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1400
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f1fef673dc22490800000000000000
+      internalID: -7772424368903217394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Preacher_Loop1-2-3End_8
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1400
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852ddc260655563a0800000000000000
+      internalID: -6672833400416644520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Preacher_Loop1-2-3End_9
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1400
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3e2e60c2a6e9a70800000000000000
+      internalID: 8835616256274129862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Preacher_Loop1-2-3End_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc5ad7db148dfe30800000000000000
+      internalID: 4538929254579723486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Preacher_Loop1-2-3End_11
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 700
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81692bfe96715f430800000000000000
+      internalID: 3815982003026826776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Preacher_Loop1-2-3End_12
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 700
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d3eca5740400240800000000000000
+      internalID: 4755871881713565064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Preacher_Loop1-2-3End_13
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 700
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4a330ca9c05a0a0800000000000000
+      internalID: -6871071797694716696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Preacher_Loop1-2-3End_14
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 700
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a79a888e3cf65c0800000000000000
+      internalID: -4219938922330228175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Preacher_Loop1-2-3End_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9775d7321a9a87550800000000000000
+      internalID: 6158858999979399033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Preacher_Loop1-2-3End_16
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40dbaa036a8922120800000000000000
+      internalID: 2387638592008273156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Preacher_Loop1-2-3End_17
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e4691eef4d2f250800000000000000
+      internalID: 5977073846645575294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

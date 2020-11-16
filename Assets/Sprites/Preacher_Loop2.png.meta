@@ -147,9 +147,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3600
-        width: 1200
-        height: 1200
+        y: 2433
+        width: 777
+        height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,10 +167,10 @@ TextureImporter:
       name: Preacher_Loop2_1
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 3600
-        width: 1200
-        height: 1200
+        x: 777
+        y: 2433
+        width: 777
+        height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,10 +188,10 @@ TextureImporter:
       name: Preacher_Loop2_2
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 3600
-        width: 1200
-        height: 1200
+        x: 1554
+        y: 2433
+        width: 777
+        height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,10 +209,10 @@ TextureImporter:
       name: Preacher_Loop2_3
       rect:
         serializedVersion: 2
-        x: 3600
-        y: 3600
-        width: 1200
-        height: 1200
+        x: 2331
+        y: 2433
+        width: 777
+        height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,10 +230,10 @@ TextureImporter:
       name: Preacher_Loop2_4
       rect:
         serializedVersion: 2
-        x: 4800
-        y: 3600
-        width: 1200
-        height: 1200
+        x: 3108
+        y: 2433
+        width: 777
+        height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,9 +252,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2400
-        width: 1200
-        height: 1200
+        y: 1622
+        width: 777
+        height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,10 +272,10 @@ TextureImporter:
       name: Preacher_Loop2_6
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 2400
-        width: 1200
-        height: 1200
+        x: 777
+        y: 1622
+        width: 777
+        height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,10 +293,10 @@ TextureImporter:
       name: Preacher_Loop2_7
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 2400
-        width: 1200
-        height: 1200
+        x: 1554
+        y: 1622
+        width: 777
+        height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -314,10 +314,10 @@ TextureImporter:
       name: Preacher_Loop2_8
       rect:
         serializedVersion: 2
-        x: 3600
-        y: 2400
-        width: 1200
-        height: 1200
+        x: 2331
+        y: 1622
+        width: 777
+        height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -335,10 +335,10 @@ TextureImporter:
       name: Preacher_Loop2_9
       rect:
         serializedVersion: 2
-        x: 4800
-        y: 2400
-        width: 1200
-        height: 1200
+        x: 3108
+        y: 1622
+        width: 777
+        height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,9 +357,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1200
-        width: 1200
-        height: 1200
+        y: 811
+        width: 777
+        height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -377,10 +377,10 @@ TextureImporter:
       name: Preacher_Loop2_11
       rect:
         serializedVersion: 2
-        x: 1200
-        y: 1200
-        width: 1200
-        height: 1200
+        x: 777
+        y: 811
+        width: 777
+        height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -398,10 +398,10 @@ TextureImporter:
       name: Preacher_Loop2_12
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 1200
-        width: 1200
-        height: 1200
+        x: 1554
+        y: 811
+        width: 777
+        height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -419,10 +419,10 @@ TextureImporter:
       name: Preacher_Loop2_13
       rect:
         serializedVersion: 2
-        x: 3600
-        y: 1200
-        width: 1200
-        height: 1200
+        x: 2331
+        y: 811
+        width: 777
+        height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -440,10 +440,10 @@ TextureImporter:
       name: Preacher_Loop2_14
       rect:
         serializedVersion: 2
-        x: 4800
-        y: 1200
-        width: 1200
-        height: 1200
+        x: 3108
+        y: 811
+        width: 777
+        height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -463,8 +463,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1200
-        height: 1200
+        width: 777
+        height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -482,10 +482,10 @@ TextureImporter:
       name: Preacher_Loop2_16
       rect:
         serializedVersion: 2
-        x: 1200
+        x: 777
         y: 0
-        width: 1200
-        height: 1200
+        width: 777
+        height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -503,10 +503,10 @@ TextureImporter:
       name: Preacher_Loop2_17
       rect:
         serializedVersion: 2
-        x: 2400
+        x: 1554
         y: 0
-        width: 1200
-        height: 1200
+        width: 777
+        height: 811
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

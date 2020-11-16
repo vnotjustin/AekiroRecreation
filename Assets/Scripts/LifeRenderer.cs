@@ -20,5 +20,6 @@ namespace AEK
         {
             Mask.transform.localScale = new Vector3(Mask.transform.localScale.x, MaxScale * (1 - Value), 1);
         }
+
     }
 }

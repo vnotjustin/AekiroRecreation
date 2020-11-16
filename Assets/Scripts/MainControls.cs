@@ -10,6 +10,9 @@ namespace AEK
         Animator m_Animator; 
 
         public int pLife;
+        [Tooltip("For use with PlayerStatistics, can give more or less health shown on the bottom UI bar")]
+        public int maxPLife; 
+
         public int chargedHit = 2;
         public int baseDamage = 1;
 
@@ -25,6 +28,24 @@ namespace AEK
 
         public float chargeTime = 1;
         public float timeLeft;
+        [Space]
+        public Animator[] heartRenders;
+       
+
+
+
+        bool struckLeft; //Alternates light strikes based on what the last strike was. 
+
+        bool inLightStrike;
+        float inputDelay;
+
+        [Space]
+        [Header("Audio")]
+        public AudioClip hitByEnemyClip;
+        public AudioClip blockedAttackClip;
+        public AudioClip dodgeClip;
+        [Header("Juice")]
+        public ParticleSystem blockParticles;
 
 
         private void Awake()
@@ -35,19 +56,38 @@ namespace AEK
         // Start is called before the first frame update
         void Start()
         {
-            pLife = 7;
+            pLife = maxPLife;
             m_Animator = gameObject.GetComponent<Animator>();
             timeLeft = chargeTime;
+
+
+
         }
 
         // Update is called once per frame
         void Update()
         {
 
-            if (Input.GetKeyDown(KeyCode.X) && !isStrike)
+            if (Input.GetKeyDown(KeyCode.X) && !inLightStrike && !canDS)
             {
                 Dodge();
             }
+
+
+            bool previousDodge = canDS;
+            canDS = m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Dodge");
+
+
+
+            bool lightStrikeStore = inLightStrike;
+
+            inLightStrike = m_Animator.GetCurrentAnimatorStateInfo(0).IsName("LightStrike") || m_Animator.GetCurrentAnimatorStateInfo(0).IsName("LightStrikeAlt");
+            if (!lightStrikeStore && inLightStrike)
+            {
+                print("DAMAGE" + Time.time);
+                Enemy.Main.TakeDamage(baseDamage);
+            }
+
 
             if (canDS)
             {
@@ -57,9 +97,9 @@ namespace AEK
                 }
             }
 
-            if (Input.GetKey(KeyCode.Space) && !reachedTime && !canDS && !isStrike)
+            if (Input.GetKey(KeyCode.Space) && !reachedTime && !canDS && !inLightStrike)
             {
-                
+
                 PCharge = true;
                 timeLeft -= Time.deltaTime;
 
@@ -79,17 +119,26 @@ namespace AEK
 
             }
 
-            if (Input.GetKeyUp(KeyCode.Space) && !canDS && !isStrike)
+            if ((Input.GetKeyUp(KeyCode.Space) || inputDelay>0) && !canDS && !inLightStrike)
             {
                 reachedTime = false;
                 PCharge = false;
-                if (liTrue && !isStrike)
+                if (liTrue && !inLightStrike)
                 {
                     timeLeft = chargeTime;
                     LiStrike();
                 }
 
             }
+
+            if (Input.GetKeyUp(KeyCode.Space) && inLightStrike)
+            {
+                inputDelay = .1f;
+            }
+
+
+
+            inputDelay -= Time.deltaTime;
         }
 
         public void StartStrike()
@@ -100,20 +149,22 @@ namespace AEK
         public void EndStrike()
         {
             isStrike = false;
-            canDam = true;
         }
 
         public void LiStrike()
         {
             m_Animator.ResetTrigger("LightStrike");
-            m_Animator.SetTrigger("LightStrike");
+            m_Animator.ResetTrigger("LightStrikeAlt");
+            string triggerName = struckLeft ? "LightStrike" : "LightStrikeAlt";
+            m_Animator.SetTrigger(triggerName);
+            struckLeft = !struckLeft;
 
-            if (!BSwing && canDam)
-            {
-                Enemy.Main.TakeDamage(baseDamage);
-                Debug.Log("Light Strike");
-                canDam = false;
-            }
+            //if (!BSwing && canDam)
+            //{
+            //    Enemy.Main.TakeDamage(baseDamage);
+            //    Debug.Log("Light Strike");
+            //    canDam = false;
+            //}
 
         }
 
@@ -145,14 +196,18 @@ namespace AEK
         public void Damaged()
         {
             if (CanDeflect())
-                Deflect();
-            else
-                Break();
+            {
+                if (!canDS)
+                {
+                    Deflect();
+                }
+            }
+            else Break();
         }
 
         public bool CanDeflect()
         {
-            if (isStrike)
+            if (inLightStrike)
                 return false;
             if (PCharge)
                 return false;
@@ -163,29 +218,54 @@ namespace AEK
 
         public void Stasised() //Called when the enemy does a stasis attack on the player
         {
+            if (isStrike || canDS)
+            {
 
+            }
+            else
+            {
+                Break();
+            }
         }
 
         public void AttackedByUnblockable() //Called when the enemy attacks with an unblockable (only dodgable) attack
         {
-
+            if (!canDS)
+            {
+                Break();
+            }
         }
 
         public void AttackedAtDodgePosition() //Called when the enemy does an attack that will hurt the player if it is backwards(in dodge), but nothing if still at the front.
         {
-
+            if (canDS)
+            {
+                Break();
+            }
         }
 
         public void Deflect()
         {
             m_Animator.ResetTrigger("Block");
             m_Animator.SetTrigger("Block");
+
+            if (blockParticles.isPlaying)
+            {
+                blockParticles.Stop();
+                blockParticles.Clear();
+            }
+            blockParticles.Play();
+
+
+            SFXManager.main.Play(blockedAttackClip, .6f, 1, .1f, .12f);
         }
 
         public void Dodge()
         {
             m_Animator.ResetTrigger("Dodge");
             m_Animator.SetTrigger("Dodge");
+
+            SFXManager.main.Play(dodgeClip, .7f, 1, .1f, 0);
             canDS = true;
         }
 
@@ -206,6 +286,15 @@ namespace AEK
             m_Animator.ResetTrigger("Block");
             m_Animator.ResetTrigger("Dodge");
             m_Animator.ResetTrigger("DodgeStrike");
+
+            SFXManager.main.Play(hitByEnemyClip, .7f, 1, 0, .07f);
+            LoseHeart();
         }
+
+        public void LoseHeart()
+        {
+            heartRenders[pLife].SetTrigger("Break");
+        }
+
     }
 }

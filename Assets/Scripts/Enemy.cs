@@ -18,13 +18,11 @@ namespace AEK
         }
 
         public Animator Anim;
+        public Vector2 positionOffset;
         [Space]
         public float Life;
         float totalLife;
-        public float Phase1Life;
-        public float Phase2Life;
-        public float Phase3Life;
-        public float Phase4Life;
+
         public List<LifeRenderer> LRs;
         [Space]
         [Header("Phase/Attack Info")]
@@ -47,6 +45,17 @@ namespace AEK
         public bool AlreadyDead;
 
         public int Phase;
+        [Space]
+        [Header("Audio")]
+        public AudioClip chargeSound;
+        public AudioClip chargeSoundBig;
+        [Space]
+        public AudioClip normalAttackClip;
+        public AudioClip requiredDodgeAttackClip;
+        public AudioClip stasisAttackClip;
+        [Space]
+        public AudioClip[] hitSounds;
+
 
         public void Awake()
         {
@@ -70,17 +79,19 @@ namespace AEK
         // Update is called once per frame
         void Update()
         {
-            if (Sliding)
-            {
-                SlideTime += Time.deltaTime;
-                if (SlideTime > 1)
-                {
-                    SlideTime = 1;
-                    Sliding = false;
-                }
-                float x = SlidePoint + (SlideTarget - SlidePoint) * CombatControl.Main.SlideCurve.Evaluate(SlideTime / CombatControl.Main.MaxSlideTime);
-                transform.position = new Vector3(x, transform.position.y, transform.position.z);
-            }
+
+            transform.localPosition = positionOffset;
+            //if (Sliding)
+            //{
+            //    SlideTime += Time.deltaTime;
+            //    if (SlideTime > 1)
+            //    {
+            //        SlideTime = 1;
+            //        Sliding = false;
+            //    }
+            //    float x = SlidePoint + (SlideTarget - SlidePoint) * CombatControl.Main.SlideCurve.Evaluate(SlideTime / CombatControl.Main.MaxSlideTime);
+            //    transform.position = new Vector3(x, transform.position.y, transform.position.z);
+            //}
 
             #region Update Life
             float lifePerHeart = totalLife / 7;
@@ -120,6 +131,7 @@ namespace AEK
         public void TakeDamage(float Value)
         {
             Life -= Value*2;
+            PlayHitSound();
         }
 
         public void AttemptBreak()
@@ -167,6 +179,21 @@ namespace AEK
             bool Broke = false;
 
             int currentAttackIndex = 0;
+
+            AudioClip chargeClip = null;
+            if (attackType.hasChargeSound)
+            {
+                chargeClip = chargeSound;
+            }
+            if (attackType.hasSpecialChargeSound)
+            {
+                chargeClip = chargeSoundBig;
+            }
+            if (chargeClip != null)
+            {
+                SFXManager.main.Play(chargeClip, .7f, 1, 0, .1f);
+            }
+
             while (currentAttackIndex < attackType.attackNodes.Length && !Broke)
             {
                 AttackNode currentAttack = attackType.attackNodes[currentAttackIndex];
@@ -193,11 +220,14 @@ namespace AEK
                 }
 
 
+
+                AudioClip targetClip = null;
                 //Attack
                 switch (currentAttack.attackType)
                 {
                     case AttackType.Normal:
                         MainControls.Main.Damaged();
+                        targetClip = normalAttackClip;
                         break;
                     case AttackType.Focused:
                         if (!Broke)
@@ -207,13 +237,20 @@ namespace AEK
                         break;
                     case AttackType.Stasis:
                         MainControls.Main.Stasised();
+                        targetClip = stasisAttackClip;
                         break;
                     case AttackType.Unblockable:
                         MainControls.Main.AttackedByUnblockable();
+                        targetClip = requiredDodgeAttackClip;
                         break;
                     case AttackType.HitsDodge:
                         MainControls.Main.AttackedAtDodgePosition();
                         break;
+                }
+
+                if (targetClip != null && currentAttack.usesSound)
+                {
+                    SFXManager.main.Play(targetClip, .9f, 1, .2f, .12f);
                 }
 
                 currentAttackIndex++;
@@ -357,6 +394,14 @@ namespace AEK
                     break;
             }
         }
+
+
+
+        public void PlayHitSound()
+        {
+            AudioClip clipToPlay = hitSounds[Random.Range(0, hitSounds.Length)];
+            SFXManager.main.Play(clipToPlay, .6f, 1, .2f, .1f);
+        }
     }
 
 
@@ -383,6 +428,10 @@ namespace AEK
         public AttackNode[] attackNodes; //For each possible point of being hit, so there would be two attack nodes for a double-swipe, each with attack type normal.
         [Tooltip("Additional time after finishing all hits before going to next attack.")]
         public float postAttackCooldown;
+        [Space]
+        public bool hasChargeSound;
+        public bool hasSpecialChargeSound;
+        
     }
 
     [System.Serializable]
@@ -393,6 +442,7 @@ namespace AEK
         //The time from the start of the animation at which it will check the player's current hitbox/state.
         [Tooltip("The amount of time from start of animation it will try to hit the player.")]
         public float hitRegisterDelay;
+        public bool usesSound;
     }
 
     [System.Serializable]
