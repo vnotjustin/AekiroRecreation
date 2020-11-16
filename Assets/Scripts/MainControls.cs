@@ -56,7 +56,7 @@ namespace AEK
                 }
             }
 
-            if (Input.GetKey(KeyCode.Space) && !reachedTime && !canDS)
+            if (Input.GetKey(KeyCode.Space) && !reachedTime && !canDS && !isStrike)
             {
                 
                 PCharge = true;
@@ -74,16 +74,14 @@ namespace AEK
                     timeLeft = chargeTime;
                     HeavyStrike();
                     PCharge = false;
-                    isStrike = true;
                 }
 
             }
 
-            if (Input.GetKeyUp(KeyCode.Space) && !canDS)
+            if (Input.GetKeyUp(KeyCode.Space) && !canDS && !isStrike)
             {
                 reachedTime = false;
                 PCharge = false;
-                isStrike = true;
                 if (liTrue)
                 {
                     timeLeft = chargeTime;
@@ -93,78 +91,47 @@ namespace AEK
             }
         }
 
-        public void ClearLi()
+        public void StartStrike()
         {
-            m_Animator.SetBool("LightStrike", false);
-            
-            isStrike = false;
-            canDS = false;
+            isStrike = true;
         }
 
-        public void ClearHeavy()
+        public void EndStrike()
         {
-            m_Animator.SetBool("HeavyStrike", false);
             isStrike = false;
-            canDS = false;
-        }
-
-        public void ClearBlock()
-        {
-            m_Animator.SetBool("Block", false);
-            isStrike = false;
-            canDS = false;
-        }
-
-        public void ClearDodge()
-        {
-            m_Animator.SetBool("Dodge", false);
-            isStrike = false;
-            canDS = false;
-        }
-
-        public void ClearDS()
-        {
-            m_Animator.SetBool("Block", false);
-            m_Animator.SetBool("DodgeStrike", false);
-            isStrike = false;
-            canDS = false;
-
-        }
-
-        public void ClearHit()
-        {
-            m_Animator.SetBool("Hit", false);
-            isStrike = false;
-            canDS = false;
         }
 
         public void LiStrike()
         {
-            m_Animator.SetBool("LightStrike", true);
+            m_Animator.ResetTrigger("LightStrike");
+            m_Animator.SetTrigger("LightStrike");
+
             if (!BSwing)
             {
                 Enemy.Main.TakeDamage(baseDamage);
                 Debug.Log("Light Strike");
             }
-            isStrike = false;
 
         }
 
         public void HeavyStrike()
         {
-            m_Animator.SetBool("HeavyStrike", true);
+            m_Animator.ResetTrigger("HeavyStrike");
+            m_Animator.SetTrigger("HeavyStrike");
+
             if (!BSwing)
             {
                 Enemy.Main.TakeDamage(chargedHit);
                 Debug.Log("Heavy Strike");
             }
-            isStrike = false;
 
         }
 
         public void DodgeStrike()
         {
-            m_Animator.SetBool("DodgeStrike", true);
+            m_Animator.ResetTrigger("DodgeStrike");
+            m_Animator.SetTrigger("DodgeStrike");
+
             if (!BSwing)
             {
                 Enemy.Main.TakeDamage(baseDamage);
@@ -208,22 +175,24 @@ namespace AEK
 
         public void Deflect()
         {
-            m_Animator.SetBool("Block", true);
+            m_Animator.ResetTrigger("Block");
+            m_Animator.SetTrigger("Block");
         }
 
         public void Dodge()
         {
-            m_Animator.SetBool("Dodge", true);
+            m_Animator.ResetTrigger("Dodge");
+            m_Animator.SetTrigger("Dodge");
             canDS = true;
         }
 
         public void Break()
         {
             pLife--;
-            m_Animator.SetBool("Hit", true);
+            m_Animator.ResetTrigger("Hit");
+            m_Animator.SetTrigger("Hit");
             if (pLife <= 0)
             {
-                m_Animator.SetTrigger("Death");
                 CombatControl.Main.Finished = true;
                 CombatControl.Main.DeathProtectedTime = 999f;
                 CombatControl.Main.DefeatAnim.SetTrigger("Play");
@@ -233,6 +202,7 @@ namespace AEK
             m_Animator.ResetTrigger("HeavyStrike");
             m_Animator.ResetTrigger("Block");
             m_Animator.ResetTrigger("Dodge");
+            m_Animator.ResetTrigger("DodgeStrike");
         }
     }
 }
