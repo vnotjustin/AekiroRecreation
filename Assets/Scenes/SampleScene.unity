@@ -1763,7 +1763,7 @@ PrefabInstance:
     - target: {fileID: 1708975246305757176, guid: 469efc1508249a54c8434dad511e221c, type: 3}
       propertyPath: Mask
       value: 
-      objectReference: {fileID: 462360394}
+      objectReference: {fileID: 843561389}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 469efc1508249a54c8434dad511e221c, type: 3}
 --- !u!4 &603114781 stripped
@@ -2575,7 +2575,7 @@ PrefabInstance:
     - target: {fileID: 1708975246305757176, guid: 469efc1508249a54c8434dad511e221c, type: 3}
       propertyPath: Mask
       value: 
-      objectReference: {fileID: 843561389}
+      objectReference: {fileID: 462360394}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 469efc1508249a54c8434dad511e221c, type: 3}
 --- !u!4 &727326512 stripped
@@ -3116,6 +3116,7 @@ MonoBehaviour:
   isDeflecting: 0
   reachedTime: 0
   canDS: 0
+  canDam: 0
   chargeTime: 1
   timeLeft: 0
 --- !u!212 &973607955

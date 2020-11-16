@@ -1,7 +1,58 @@
 fileFormatVersion: 2
-guid: d6d65de2166c31e469c42fa3e334d26e
+guid: 2b94cb35ae748b0449e78519de5ba731
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 674378670035850700
+    second: Preacher_Loop3End.fw_0
+  - first:
+      213: -3068106149447366488
+    second: Preacher_Loop3End.fw_1
+  - first:
+      213: 2846845383596758847
+    second: Preacher_Loop3End.fw_2
+  - first:
+      213: -5594312978722662353
+    second: Preacher_Loop3End.fw_3
+  - first:
+      213: -934929467525409249
+    second: Preacher_Loop3End.fw_4
+  - first:
+      213: -517007052313932911
+    second: Preacher_Loop3End.fw_5
+  - first:
+      213: -9088856668924158012
+    second: Preacher_Loop3End.fw_6
+  - first:
+      213: -1029783485855881830
+    second: Preacher_Loop3End.fw_7
+  - first:
+      213: 4369549475217608937
+    second: Preacher_Loop3End.fw_8
+  - first:
+      213: -6465980256467515073
+    second: Preacher_Loop3End.fw_9
+  - first:
+      213: -8808624040414905079
+    second: Preacher_Loop3End.fw_10
+  - first:
+      213: 7957925252931732167
+    second: Preacher_Loop3End.fw_11
+  - first:
+      213: -5211621516689630805
+    second: Preacher_Loop3End.fw_12
+  - first:
+      213: -4994093758231401572
+    second: Preacher_Loop3End.fw_13
+  - first:
+      213: 7776771240273791058
+    second: Preacher_Loop3End.fw_14
+  - first:
+      213: -1093263521869726022
+    second: Preacher_Loop3End.fw_15
+  - first:
+      213: -5842262171946328870
+    second: Preacher_Loop3End.fw_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -123,7 +174,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Preacher_Loop3End.fw_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 5000
+        height: 3200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adcdf6c128d1ceea0800000000000000
+      internalID: -5842262171946328870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
