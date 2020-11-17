@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    static GameManager instance;
     public static GameManager Main;
 
     public bool SwiftStrikes = false;
@@ -23,14 +22,14 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if(instance != null)
+        if(Main != null)
         {
             Destroy(gameObject);
         }
 
         else
         {
-            instance = this;
+            Main = this;
             DontDestroyOnLoad(gameObject);
         }
     }
