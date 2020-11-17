@@ -102,6 +102,7 @@ namespace AEK
 
                 PCharge = true;
                 timeLeft -= Time.deltaTime;
+                
 
                 if (timeLeft > 0)
                 {
