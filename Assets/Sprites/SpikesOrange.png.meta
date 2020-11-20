@@ -1,7 +1,55 @@
 fileFormatVersion: 2
 guid: 170611bdd46eb974c87c0aa9775ab738
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 445330471778639041
+    second: SpikesOrange_0
+  - first:
+      213: -2534322012713933385
+    second: SpikesOrange_1
+  - first:
+      213: 2714542304009700740
+    second: SpikesOrange_2
+  - first:
+      213: 4245848824699127446
+    second: SpikesOrange_3
+  - first:
+      213: -8088038240024622153
+    second: SpikesOrange_4
+  - first:
+      213: -4621314404485256814
+    second: SpikesOrange_5
+  - first:
+      213: -8760038343261643854
+    second: SpikesOrange_6
+  - first:
+      213: -3482927994770764242
+    second: SpikesOrange_7
+  - first:
+      213: 4442351872500981380
+    second: SpikesOrange_8
+  - first:
+      213: -7539692895348151610
+    second: SpikesOrange_9
+  - first:
+      213: 5753630064081857410
+    second: SpikesOrange_10
+  - first:
+      213: 7590326865690782287
+    second: SpikesOrange_11
+  - first:
+      213: -6789562730675306185
+    second: SpikesOrange_12
+  - first:
+      213: 8658314131056572496
+    second: SpikesOrange_13
+  - first:
+      213: -540354036391469645
+    second: SpikesOrange_14
+  - first:
+      213: -7728924042702660738
+    second: SpikesOrange_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +89,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +121,357 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpikesOrange_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1550
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ccd50264b12e2600800000000000000
+      internalID: 445330471778639041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesOrange_1
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 1550
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5abbd8e8744dcd0800000000000000
+      internalID: -2534322012713933385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesOrange_2
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1550
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485c44ed7ddfba520800000000000000
+      internalID: 2714542304009700740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesOrange_3
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 1550
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6968336b2094cea30800000000000000
+      internalID: 4245848824699127446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesOrange_4
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 1550
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb8e8da21481cf80800000000000000
+      internalID: -8088038240024622153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesOrange_5
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1550
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 299a24da80bcddfb0800000000000000
+      internalID: -4621314404485256814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesOrange_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 775
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb961b1a871e6680800000000000000
+      internalID: -8760038343261643854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesOrange_7
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 775
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ecc6d21772aafc0800000000000000
+      internalID: -3482927994770764242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesOrange_8
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 775
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e56bfcd7766ad30800000000000000
+      internalID: 4442351872500981380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesOrange_9
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 775
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6caac393241ad5790800000000000000
+      internalID: -7539692895348151610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesOrange_10
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 775
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b6b9a2f0009df40800000000000000
+      internalID: 5753630064081857410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesOrange_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a6a9ea112465960800000000000000
+      internalID: 7590326865690782287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesOrange_12
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 0
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7310ed94ba0a6c1a0800000000000000
+      internalID: -6789562730675306185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesOrange_13
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 0
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0583f5714d2882870800000000000000
+      internalID: 8658314131056572496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesOrange_14
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 0
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd10f7edd64088f0800000000000000
+      internalID: -540354036391469645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesOrange_15
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 0
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b5bb268885db490800000000000000
+      internalID: -7728924042702660738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

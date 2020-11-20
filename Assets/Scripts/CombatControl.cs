@@ -29,6 +29,7 @@ namespace AEK
         public Animator Tutorial1;
         public Animator Tutorial2;
         public Animator Tutorial3;
+        public Animator Tutorial4;
         [Space]
         public GameObject HitSound;
         public GameObject DeflectSound;
@@ -38,6 +39,8 @@ namespace AEK
         public AudioClip BreakClip;
         public AudioClip IgnoreClip;
         public AudioSource Source;
+
+        float hideTimer;
 
         public void Awake()
         {
@@ -53,6 +56,16 @@ namespace AEK
         // Update is called once per frame
         void Update()
         {
+            if (hideTimer >= 0)
+            {
+                hideTimer += Time.deltaTime;
+                if (hideTimer > 4)
+                {
+                    hideTimer = 0;
+                    VeryStartBase.SetTrigger("Play");
+                    Tutorial1.SetTrigger("Play");
+                }
+            }
             /*float a = MC.Main.Life;
             if (a > 0)
                 LifeText_MC.text = a.ToString();

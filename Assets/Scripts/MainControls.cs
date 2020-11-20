@@ -30,6 +30,8 @@ namespace AEK
         public float timeLeft;
         [Space]
         public Animator[] heartRenders;
+
+        
        
 
 
@@ -38,6 +40,7 @@ namespace AEK
 
         bool inLightStrike;
         float inputDelay;
+        float dodgeInputDelay;
 
         [Space]
         [Header("Audio")]
@@ -68,10 +71,18 @@ namespace AEK
         void Update()
         {
 
-            if (Input.GetKeyDown(KeyCode.X) && !inLightStrike && !canDS)
+            if (Input.GetKeyDown(KeyCode.X) || dodgeInputDelay>0)
             {
-                Dodge();
+                if (!inLightStrike && !canDS)
+                {
+                    Dodge();
+                }
+                else if (Input.GetKeyDown(KeyCode.X))
+                {
+                    dodgeInputDelay = .25f;
+                }
             }
+            dodgeInputDelay -= Time.deltaTime;
 
 
             bool previousDodge = canDS;
@@ -128,6 +139,8 @@ namespace AEK
                 {
                     timeLeft = chargeTime;
                     LiStrike();
+
+
                 }
 
             }
@@ -219,7 +232,23 @@ namespace AEK
 
         public void Stasised() //Called when the enemy does a stasis attack on the player
         {
-            if (isStrike || canDS)
+            if (inLightStrike || canDS)
+            {
+
+            }
+            else
+            {
+                Break();
+            }
+        }
+
+        public void MustStasised() //Called when the enemy does a stasis attack on the player
+        {
+            if (inLightStrike)
+            {
+
+            }
+            else if (canDS && !m_Animator.GetCurrentAnimatorStateInfo(0).IsName("DodgeStrike"))
             {
 
             }
@@ -239,7 +268,7 @@ namespace AEK
 
         public void AttackedAtDodgePosition() //Called when the enemy does an attack that will hurt the player if it is backwards(in dodge), but nothing if still at the front.
         {
-            if (canDS)
+            if (transform.position.x>9)
             {
                 Break();
             }

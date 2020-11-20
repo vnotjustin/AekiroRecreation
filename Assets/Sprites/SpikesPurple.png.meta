@@ -1,7 +1,55 @@
 fileFormatVersion: 2
 guid: e6a57d08a27d3154ba2317743d46177f
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6489700511608891690
+    second: SpikesPurple_0
+  - first:
+      213: 9157759886656456636
+    second: SpikesPurple_1
+  - first:
+      213: -5530874104178943107
+    second: SpikesPurple_2
+  - first:
+      213: -5045594015838280108
+    second: SpikesPurple_3
+  - first:
+      213: -2014638340411297941
+    second: SpikesPurple_4
+  - first:
+      213: -7697236251602449085
+    second: SpikesPurple_5
+  - first:
+      213: -944377545519627986
+    second: SpikesPurple_6
+  - first:
+      213: -1233738490048518918
+    second: SpikesPurple_7
+  - first:
+      213: -4763433633551642989
+    second: SpikesPurple_8
+  - first:
+      213: -7654837438318318457
+    second: SpikesPurple_9
+  - first:
+      213: 2090597262545619131
+    second: SpikesPurple_10
+  - first:
+      213: 6647585068893213605
+    second: SpikesPurple_11
+  - first:
+      213: 7447525628456482297
+    second: SpikesPurple_12
+  - first:
+      213: -2260244594975785312
+    second: SpikesPurple_13
+  - first:
+      213: 2228343771336570432
+    second: SpikesPurple_14
+  - first:
+      213: -8417381262319248477
+    second: SpikesPurple_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +89,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +121,357 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpikesPurple_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1550
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d691e2c4c3ffe5a0800000000000000
+      internalID: -6489700511608891690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesPurple_1
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 1550
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7ca76d816e61f70800000000000000
+      internalID: 9157759886656456636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesPurple_2
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1550
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7bd10b5e436e33b0800000000000000
+      internalID: -5530874104178943107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesPurple_3
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 1550
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4566f1da9f27af9b0800000000000000
+      internalID: -5045594015838280108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesPurple_4
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 1550
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6fe6e87a119a04e0800000000000000
+      internalID: -2014638340411297941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesPurple_5
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1550
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d0afe296ced2590800000000000000
+      internalID: -7697236251602449085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesPurple_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 775
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21827930a5e4e2f0800000000000000
+      internalID: -944377545519627986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesPurple_7
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 775
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af46ee24161e0eee0800000000000000
+      internalID: -1233738490048518918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesPurple_8
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 775
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e81091952e4edb0800000000000000
+      internalID: -4763433633551642989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesPurple_9
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 775
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78cecab28ed84c590800000000000000
+      internalID: -7654837438318318457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesPurple_10
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 775
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb88f62422b430d10800000000000000
+      internalID: 2090597262545619131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesPurple_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a312955667f04c50800000000000000
+      internalID: 6647585068893213605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesPurple_12
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 0
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f534c3b91dea5760800000000000000
+      internalID: 7447525628456482297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesPurple_13
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 0
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aeb8f2248ff1a0e0800000000000000
+      internalID: -2260244594975785312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesPurple_14
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 0
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04678ff8adaacee10800000000000000
+      internalID: 2228343771336570432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesPurple_15
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 0
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab9e60d6547f2b80800000000000000
+      internalID: -8417381262319248477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

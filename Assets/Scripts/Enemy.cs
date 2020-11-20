@@ -6,6 +6,7 @@ namespace AEK
 {
     public class Enemy : MonoBehaviour {
         public static Enemy Main;
+        public bool isBossOne;
 
 
         public enum AttackType
@@ -14,7 +15,8 @@ namespace AEK
             Focused,
             Stasis,
             Unblockable, //This attack can only be dodged.
-            HitsDodge //This attack will hurt the player if its currently fallen back in the dodge.
+            HitsDodge, //This attack will hurt the player if its currently fallen back in the dodge.
+            MustStasis
         }
 
         public Animator Anim;
@@ -74,6 +76,7 @@ namespace AEK
         {
             allPossibleAttacks = GetAllPossibleAttacks(0);
             StartCoroutine(Process());
+            
         }
 
         // Update is called once per frame
@@ -130,7 +133,7 @@ namespace AEK
 
         public void TakeDamage(float Value)
         {
-            Life -= Value*2;
+            Life -= Value;
             PlayHitSound();
         }
 
@@ -163,6 +166,15 @@ namespace AEK
 
                 yield return new WaitForSeconds(2f);
                 print("done waiting");
+                if (isBossOne && currentPhaseIndex == 3)
+                {
+                    SpikeManager.Main.StartSpikes();
+                    while (Life > 0)
+                    {
+                        yield return new WaitForEndOfFrame();
+                    }
+                    StopCoroutine(Process());
+                }
                 EnemyAttack newAttack = PickAttack();
                 yield return StartAttack(newAttack);
                 yield return new WaitForEndOfFrame();
@@ -245,6 +257,10 @@ namespace AEK
                         break;
                     case AttackType.HitsDodge:
                         MainControls.Main.AttackedAtDodgePosition();
+                        break;
+                    case AttackType.MustStasis:
+                        MainControls.Main.MustStasised();
+                        targetClip = stasisAttackClip;
                         break;
                 }
 
@@ -363,7 +379,10 @@ namespace AEK
             currentPhaseIndex = newPhaseIndex;
 
             yield return new WaitForSeconds(phaseChange.delayTilFirstAttack);
-            yield return StartAttack(phaseChange.firstAttackInPhase);
+            if (currentPhaseIndex != 3)
+            {
+                yield return StartAttack(phaseChange.firstAttackInPhase);
+            }
         }
 
         public void Death()
@@ -391,6 +410,9 @@ namespace AEK
                     break;
                 case PhaseChange.TutorialType.StasisAttack:
                     CombatControl.Main.Tutorial3.SetTrigger("Play");
+                    break;
+                case PhaseChange.TutorialType.Dodge:
+                    CombatControl.Main.Tutorial4.SetTrigger("Play");
                     break;
             }
         }
@@ -471,7 +493,8 @@ namespace AEK
             None,
             NormalAttack,
             FocusedAttack,
-            StasisAttack
+            StasisAttack,
+            Dodge
         }
         public TutorialType tutorialType;
         [Space]

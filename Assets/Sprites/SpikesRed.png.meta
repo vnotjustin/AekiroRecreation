@@ -1,7 +1,55 @@
 fileFormatVersion: 2
 guid: 7dcbd78a6730e6d449af5a064dc5e46b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -5203509530281784596
+    second: SpikesRed_0
+  - first:
+      213: 2059733537819549124
+    second: SpikesRed_1
+  - first:
+      213: 488720770351819795
+    second: SpikesRed_2
+  - first:
+      213: 7678446456669748192
+    second: SpikesRed_3
+  - first:
+      213: 4177467613539011068
+    second: SpikesRed_4
+  - first:
+      213: -6632043050887136208
+    second: SpikesRed_5
+  - first:
+      213: -4031225829260914571
+    second: SpikesRed_6
+  - first:
+      213: -4129787587397768270
+    second: SpikesRed_7
+  - first:
+      213: -615782078290192214
+    second: SpikesRed_8
+  - first:
+      213: -4973951127313168930
+    second: SpikesRed_9
+  - first:
+      213: -5811542444581736890
+    second: SpikesRed_10
+  - first:
+      213: 4598246192114953867
+    second: SpikesRed_11
+  - first:
+      213: -4819640960296547271
+    second: SpikesRed_12
+  - first:
+      213: 2754778541564170270
+    second: SpikesRed_13
+  - first:
+      213: -8019307728482483764
+    second: SpikesRed_14
+  - first:
+      213: 8072245329026080394
+    second: SpikesRed_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +89,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +121,357 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpikesRed_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1550
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceac13ec6ab69c7b0800000000000000
+      internalID: -5203509530281784596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesRed_1
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 1550
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd51bd5db4a59c10800000000000000
+      internalID: 2059733537819549124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesRed_2
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1550
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31cec2783f848c600800000000000000
+      internalID: 488720770351819795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesRed_3
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 1550
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb38a4ce525f8a60800000000000000
+      internalID: 7678446456669748192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesRed_4
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 1550
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf901bd49a859f930800000000000000
+      internalID: 4177467613539011068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesRed_5
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1550
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c36c8bbff36f3a0800000000000000
+      internalID: -6632043050887136208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesRed_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 775
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570168577753e08c0800000000000000
+      internalID: -4031225829260914571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesRed_7
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 775
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bba65fd11c00b6c0800000000000000
+      internalID: -4129787587397768270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesRed_8
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 775
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8167c567d4477f0800000000000000
+      internalID: -615782078290192214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesRed_9
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 775
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed548568dc9f8fab0800000000000000
+      internalID: -4973951127313168930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesRed_10
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 775
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ea99100f0495fa0800000000000000
+      internalID: -5811542444581736890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesRed_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8eedc69c8040df30800000000000000
+      internalID: 4598246192114953867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesRed_12
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 0
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c0a9805123d1db0800000000000000
+      internalID: -4819640960296547271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesRed_13
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 0
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e101dc4fc70fa3620800000000000000
+      internalID: 2754778541564170270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesRed_14
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 0
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc1c14beb12b5b090800000000000000
+      internalID: -8019307728482483764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpikesRed_15
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 0
+        width: 276
+        height: 775
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8ed760bb50660070800000000000000
+      internalID: 8072245329026080394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
