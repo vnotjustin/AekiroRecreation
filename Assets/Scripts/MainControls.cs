@@ -13,8 +13,8 @@ namespace AEK
         [Tooltip("For use with PlayerStatistics, can give more or less health shown on the bottom UI bar")]
         public int maxPLife; 
 
-        public int chargedHit = 2;
-        public int baseDamage = 1;
+        public float chargedHit = 2;
+        public float baseDamage = 1;
 
         public bool PCharge;
         public bool BSwing;
@@ -25,9 +25,19 @@ namespace AEK
         public bool reachedTime = false;
         public bool canDS = false;
         public bool canDam = false;
+        public bool canHeavy = false;
+        public bool canProt = false;
 
         public float chargeTime = 1;
         public float timeLeft;
+        public float strikeTimer;
+        public float dsTimer;
+        public int strikeCounter;
+
+        public float ogBD;
+        public float ogCD;
+
+
         [Space]
         public Animator[] heartRenders;
 
@@ -59,17 +69,46 @@ namespace AEK
         // Start is called before the first frame update
         void Start()
         {
+            if (GameManager.Main.heavyUnlocked)
+            {
+                canHeavy = true;
+            }
+
             pLife = maxPLife;
             m_Animator = gameObject.GetComponent<Animator>();
             timeLeft = chargeTime;
 
-
+            if (GameManager.Main.ProtectionofDivine)
+            {
+                canProt = true;
+            }
+            if (GameManager.Main.SwiftStrikes)
+            {
+                baseDamage = 1.25f;
+            }
+            ogBD = baseDamage;
+            ogCD = chargedHit;
 
         }
 
         // Update is called once per frame
         void Update()
         {
+            strikeTimer -= Time.deltaTime;
+            dsTimer -= Time.deltaTime;
+            if (Input.GetKey(KeyCode.Space) && dsTimer < 0 && strikeTimer < 0 && GameManager.Main.CrushingStrike)
+            {
+                baseDamage = ogBD;
+                chargedHit = ogCD;
+            }
+
+            else if (Input.GetKey(KeyCode.Space) == false && strikeTimer < 0 && GameManager.Main.SwordGuan)
+            {
+                baseDamage = ogBD;
+                chargedHit = ogCD;
+            }
+
+           
 
             if (Input.GetKeyDown(KeyCode.X) || dodgeInputDelay>0)
             {
@@ -93,7 +132,16 @@ namespace AEK
             bool lightStrikeStore = inLightStrike;
 
             inLightStrike = m_Animator.GetCurrentAnimatorStateInfo(0).IsName("LightStrike") || m_Animator.GetCurrentAnimatorStateInfo(0).IsName("LightStrikeAlt");
-            if (!lightStrikeStore && inLightStrike)
+            if (!lightStrikeStore && inLightStrike && GameManager.Main.SwordGuan)
+            {
+                print("DAMAGE" + Time.time);
+                Enemy.Main.TakeDamage(baseDamage);
+                strikeTimer = 1;
+
+                baseDamage = baseDamage + (baseDamage * .05f);
+            }
+
+            else if(!lightStrikeStore && inLightStrike)
             {
                 print("DAMAGE" + Time.time);
                 Enemy.Main.TakeDamage(baseDamage);
@@ -120,7 +168,7 @@ namespace AEK
                     liTrue = true;
                 }
 
-                else if (timeLeft < 0)
+                else if (timeLeft < 0 && canHeavy)
                 {
                     reachedTime = true;
                     liTrue = false;
@@ -138,8 +186,17 @@ namespace AEK
                 if (liTrue && !inLightStrike)
                 {
                     timeLeft = chargeTime;
-                    LiStrike();
+                    strikeCounter++;
 
+                    if (strikeCounter == 5 && GameManager.Main.BlessingZhang)
+                    {
+                        HeavyStrike();
+                        strikeCounter = 0;
+                    }
+                    else
+                    { 
+                        LiStrike(); 
+                    }
 
                 }
 
@@ -167,11 +224,24 @@ namespace AEK
 
         public void LiStrike()
         {
-            m_Animator.ResetTrigger("LightStrike");
-            m_Animator.ResetTrigger("LightStrikeAlt");
-            string triggerName = struckLeft ? "LightStrike" : "LightStrikeAlt";
-            m_Animator.SetTrigger(triggerName);
-            struckLeft = !struckLeft;
+            if (!GameManager.Main.StaggeringBlow)
+            {
+
+                m_Animator.ResetTrigger("LightStrike");
+                m_Animator.ResetTrigger("LightStrikeAlt");
+                string triggerName = struckLeft ? "LightStrike" : "LightStrikeAlt";
+                m_Animator.SetTrigger(triggerName);
+                struckLeft = !struckLeft;
+
+            }
+            else
+            {
+                m_Animator.ResetTrigger("LightStrikeFast");
+                m_Animator.ResetTrigger("LightStrikeAltFast");
+                string triggerName = struckLeft ? "LightStrikeFast" : "LightStrikeAltFast";
+                m_Animator.SetTrigger(triggerName);
+                struckLeft = !struckLeft;
+            }
 
             //if (!BSwing && canDam)
             //{
@@ -204,6 +274,13 @@ namespace AEK
             {
                 Enemy.Main.TakeDamage(baseDamage);
                 Debug.Log("Dodge Strike");
+            }
+
+            if (GameManager.Main.CrushingStrike)
+            {
+                baseDamage = 2f;
+                chargedHit = 4f;
+                dsTimer = 2;
             }
         }
 
@@ -301,24 +378,32 @@ namespace AEK
 
         public void Break()
         {
-            pLife--;
-            m_Animator.ResetTrigger("Hit");
-            m_Animator.SetTrigger("Hit");
-            if (pLife <= 0)
+            if (canProt)
             {
-                CombatControl.Main.Finished = true;
-                CombatControl.Main.DeathProtectedTime = 999f;
-                CombatControl.Main.DefeatAnim.SetTrigger("Play");
-                //dead
+                canProt = false;
             }
-            m_Animator.ResetTrigger("LightStrike");
-            m_Animator.ResetTrigger("HeavyStrike");
-            m_Animator.ResetTrigger("Block");
-            m_Animator.ResetTrigger("Dodge");
-            m_Animator.ResetTrigger("DodgeStrike");
 
-            SFXManager.main.Play(hitByEnemyClip, .7f, 1, 0, .07f);
-            LoseHeart();
+            else
+            {
+                pLife--;
+                m_Animator.ResetTrigger("Hit");
+                m_Animator.SetTrigger("Hit");
+                if (pLife <= 0)
+                {
+                    CombatControl.Main.Finished = true;
+                    CombatControl.Main.DeathProtectedTime = 999f;
+                    CombatControl.Main.DefeatAnim.SetTrigger("Play");
+                    //dead
+                }
+                m_Animator.ResetTrigger("LightStrike");
+                m_Animator.ResetTrigger("HeavyStrike");
+                m_Animator.ResetTrigger("Block");
+                m_Animator.ResetTrigger("Dodge");
+                m_Animator.ResetTrigger("DodgeStrike");
+
+                SFXManager.main.Play(hitByEnemyClip, .7f, 1, 0, .07f);
+                LoseHeart();
+            }
         }
 
         public void LoseHeart()

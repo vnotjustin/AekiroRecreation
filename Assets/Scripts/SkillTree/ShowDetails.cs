@@ -40,47 +40,47 @@ public class ShowDetails : MonoBehaviour
         if(this.tag == "SwiftStrikes" && thisButton)
         {
             title.text = "Swift Strikes";
-            description.text = "Light attacks now swipe twice.";
+            description.text = "Increases light attack damage. Cost 1 crystal.";
         }
         if (this.tag == "BlessingZhang" && thisButton)
         {
             title.text = "Blessing of Zhang Fei";
-            description.text = "Every 5th light attack now becomes a heavy attack.";
+            description.text = "Every 5th light attack now becomes a heavy attack. Costs 2 crystals.";
         }
         if (this.tag == "SwordGuan" && thisButton)
         {
             title.text = "Sword of Guan Yu";
-            description.text = "Increases light attack damage.";
+            description.text = "Consecutive strikes deal slightly more damage with each attack. Costs 3 crystals.";
         }
         if (this.tag == "StaggeringBlow" && thisButton)
         {
             title.text = "Staggering Blow";
-            description.text = "Heavy attack now staggers the enemy.";
+            description.text = "Light attacks animation is faster. Costs 1 crystal.";
         }
         if (this.tag == "PracticedSword" && thisButton)
         {
             title.text = "Practiced Swordsman";
-            description.text = "Charging becomes faster.";
+            description.text = "Stronger attacks when enemy is attacking. Costs 2 crystals.";
         }
         if (this.tag == "CrushingStrike" && thisButton)
         {
             title.text = "Crushing Strike";
-            description.text = "Increases heavy attack damage.";
+            description.text = "Dodge Strike increases damage from all other attacks for 5 seconds. Costs 3 crystals.";
         }
         if (this.tag == "QuickEvasion" && thisButton)
         {
             title.text = "Quick Evasion";
-            description.text = "Slightly increase Dodge window.";
+            description.text = "Slightly increase Dodge window. Costs 1 crystal.";
         }
         if (this.tag == "ProtectionofDivine" && thisButton)
         {
             title.text = "Protection of the Divine";
-            description.text = "Start fight with shield that blocks first hit attack";
+            description.text = "Start fight with shield that blocks first hit attack. Costs 2 crystals.";
         }
         if (this.tag == "Thornmail" && thisButton)
         {
             title.text = "Thornmail";
-            description.text = "Bosses take 10% of damage done to the player.";
+            description.text = "Blocking doesn’t prevent attacking. Costs 3 crystals.";
         }
 
         if (thisButton)
