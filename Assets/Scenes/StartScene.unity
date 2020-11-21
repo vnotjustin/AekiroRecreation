@@ -485,15 +485,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b0ea2f39b259c043a5002325df8a35e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SwiftStrikes: 0
-  BlessingZhang: 0
-  SwordGuan: 0
-  StaggeringBlow: 0
+  SwiftStrikes: 1
+  BlessingZhang: 1
+  SwordGuan: 1
+  StaggeringBlow: 1
   PracticedSword: 0
-  CrushingStrike: 0
+  CrushingStrike: 1
   QuickEvasion: 0
-  ProtectionofDivine: 0
+  ProtectionofDivine: 1
   Thornmail: 0
+  heavyUnlocked: 0
   crystals: 9
 --- !u!4 &223585863
 Transform:

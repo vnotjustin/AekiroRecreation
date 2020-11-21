@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public bool ProtectionofDivine = false;
     public bool Thornmail = false;
 
+    public bool heavyUnlocked = false;
+
     public int crystals = 9;
 
 
