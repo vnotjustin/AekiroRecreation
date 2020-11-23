@@ -228,8 +228,8 @@ namespace AEK
 
         public void LiStrike()
         {
-            if (!SkillTreeDisabled && !GameManager.Main.StaggeringBlow)
-            {
+            //if (!SkillTreeDisabled && !GameManager.Main.StaggeringBlow)
+            //{
 
                 m_Animator.ResetTrigger("LightStrike");
                 m_Animator.ResetTrigger("LightStrikeAlt");
@@ -237,7 +237,8 @@ namespace AEK
                 m_Animator.SetTrigger(triggerName);
                 struckLeft = !struckLeft;
 
-            }
+            //}
+            /*
             else
             {
                 m_Animator.ResetTrigger("LightStrikeFast");
@@ -246,6 +247,7 @@ namespace AEK
                 m_Animator.SetTrigger(triggerName);
                 struckLeft = !struckLeft;
             }
+            */
 
             //if (!BSwing && canDam)
             //{
