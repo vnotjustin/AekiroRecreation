@@ -6,6 +6,7 @@ namespace AEK
 {
     public class MainControls : MonoBehaviour
     {
+
         public static MainControls Main;
         Animator m_Animator; 
 
@@ -36,6 +37,9 @@ namespace AEK
 
         public float ogBD;
         public float ogCD;
+
+        //Added by Leo
+        public bool SkillTreeDisabled;
 
 
         [Space]
@@ -69,20 +73,20 @@ namespace AEK
         // Start is called before the first frame update
         void Start()
         {
-            if (GameManager.Main.heavyUnlocked)
-            {
-                canHeavy = true;
-            }
+                if (!SkillTreeDisabled && GameManager.Main.heavyUnlocked)
+                {
+                    canHeavy = true;
+                }
 
             pLife = maxPLife;
             m_Animator = gameObject.GetComponent<Animator>();
             timeLeft = chargeTime;
 
-            if (GameManager.Main.ProtectionofDivine)
+            if (!SkillTreeDisabled && GameManager.Main.ProtectionofDivine)
             {
                 canProt = true;
             }
-            if (GameManager.Main.SwiftStrikes)
+            if (!SkillTreeDisabled && GameManager.Main.SwiftStrikes)
             {
                 baseDamage = 1.25f;
             }
@@ -96,13 +100,13 @@ namespace AEK
         {
             strikeTimer -= Time.deltaTime;
             dsTimer -= Time.deltaTime;
-            if (Input.GetKey(KeyCode.Space) && dsTimer < 0 && strikeTimer < 0 && GameManager.Main.CrushingStrike)
+            if (Input.GetKey(KeyCode.Space) && dsTimer < 0 && strikeTimer < 0 && !SkillTreeDisabled && GameManager.Main.CrushingStrike)
             {
                 baseDamage = ogBD;
                 chargedHit = ogCD;
             }
 
-            else if (Input.GetKey(KeyCode.Space) == false && strikeTimer < 0 && GameManager.Main.SwordGuan)
+            else if (Input.GetKey(KeyCode.Space) == false && strikeTimer < 0 && !SkillTreeDisabled && GameManager.Main.SwordGuan )
             {
                 baseDamage = ogBD;
                 chargedHit = ogCD;
@@ -132,7 +136,7 @@ namespace AEK
             bool lightStrikeStore = inLightStrike;
 
             inLightStrike = m_Animator.GetCurrentAnimatorStateInfo(0).IsName("LightStrike") || m_Animator.GetCurrentAnimatorStateInfo(0).IsName("LightStrikeAlt");
-            if (!lightStrikeStore && inLightStrike && GameManager.Main.SwordGuan)
+            if (!lightStrikeStore && inLightStrike && !SkillTreeDisabled && GameManager.Main.SwordGuan)
             {
                 print("DAMAGE" + Time.time);
                 Enemy.Main.TakeDamage(baseDamage);
@@ -188,7 +192,7 @@ namespace AEK
                     timeLeft = chargeTime;
                     strikeCounter++;
 
-                    if (strikeCounter == 5 && GameManager.Main.BlessingZhang)
+                    if (strikeCounter == 5 && !SkillTreeDisabled && GameManager.Main.BlessingZhang)
                     {
                         HeavyStrike();
                         strikeCounter = 0;
@@ -224,7 +228,7 @@ namespace AEK
 
         public void LiStrike()
         {
-            if (!GameManager.Main.StaggeringBlow)
+            if (!SkillTreeDisabled && !GameManager.Main.StaggeringBlow)
             {
 
                 m_Animator.ResetTrigger("LightStrike");
@@ -276,7 +280,7 @@ namespace AEK
                 Debug.Log("Dodge Strike");
             }
 
-            if (GameManager.Main.CrushingStrike)
+            if (!SkillTreeDisabled && GameManager.Main.CrushingStrike)
             {
                 baseDamage = 2f;
                 chargedHit = 4f;
