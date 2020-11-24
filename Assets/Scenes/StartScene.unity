@@ -489,12 +489,12 @@ MonoBehaviour:
   BlessingZhang: 1
   SwordGuan: 1
   StaggeringBlow: 1
-  PracticedSword: 0
+  PracticedSword: 1
   CrushingStrike: 1
-  QuickEvasion: 0
+  QuickEvasion: 1
   ProtectionofDivine: 1
   Thornmail: 0
-  heavyUnlocked: 0
+  heavyUnlocked: 1
   crystals: 9
 --- !u!4 &223585863
 Transform:

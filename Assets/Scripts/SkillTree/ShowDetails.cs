@@ -55,12 +55,12 @@ public class ShowDetails : MonoBehaviour
         if (this.tag == "StaggeringBlow" && thisButton)
         {
             title.text = "Staggering Blow";
-            description.text = "Light attacks animation is faster. Costs 1 crystal.";
+            description.text = "Heavy attacks now do burn damage for 2 seconds. Costs 1 crystal.";
         }
         if (this.tag == "PracticedSword" && thisButton)
         {
             title.text = "Practiced Swordsman";
-            description.text = "Stronger attacks when enemy is attacking. Costs 2 crystals.";
+            description.text = "All attacks can now critically strike. Costs 2 crystals.";
         }
         if (this.tag == "CrushingStrike" && thisButton)
         {
@@ -70,7 +70,7 @@ public class ShowDetails : MonoBehaviour
         if (this.tag == "QuickEvasion" && thisButton)
         {
             title.text = "Quick Evasion";
-            description.text = "Slightly increase Dodge window. Costs 1 crystal.";
+            description.text = "Gain a brief moment of invulnerability after every input besides light attacks.  Costs 1 crystal.";
         }
         if (this.tag == "ProtectionofDivine" && thisButton)
         {
@@ -79,8 +79,8 @@ public class ShowDetails : MonoBehaviour
         }
         if (this.tag == "Thornmail" && thisButton)
         {
-            title.text = "Thornmail";
-            description.text = "Blocking doesn’t prevent attacking. Costs 3 crystals.";
+            title.text = "Second Wind";
+            description.text = "Blocking 20 times will block the next hit attack. Costs 3 crystals.";
         }
 
         if (thisButton)

@@ -28,12 +28,26 @@ namespace AEK
         public bool canDam = false;
         public bool canHeavy = false;
         public bool canProt = false;
+        public bool justCrit = false;
+        public bool evadeUp = false;
+        public bool newHeart = false;
+
+        public bool onFire = false;
 
         public float chargeTime = 1;
         public float timeLeft;
         public float strikeTimer;
         public float dsTimer;
         public int strikeCounter;
+        public int blockCounter;
+        public float fireTick = 2;
+        public float tickInt = .5f;
+        public float tickMark = .5f;
+        public float evasionTime = .25f;
+    
+
+        public int numNeeded;
+        public int critChance = 25;
 
         public float ogBD;
         public float ogCD;
@@ -47,7 +61,7 @@ namespace AEK
 
         
        
-
+        
 
 
         bool struckLeft; //Alternates light strikes based on what the last strike was. 
@@ -93,13 +107,26 @@ namespace AEK
             ogBD = baseDamage;
             ogCD = chargedHit;
 
+            
+
         }
 
         // Update is called once per frame
         void Update()
         {
+            fireTick += Time.deltaTime;
             strikeTimer -= Time.deltaTime;
             dsTimer -= Time.deltaTime;
+            evasionTime -= Time.deltaTime;
+
+            if (evadeUp)
+            {
+                if(evasionTime <= 0)
+                {
+                    evadeUp = false;
+                }
+            }
+
             if (Input.GetKey(KeyCode.Space) && dsTimer < 0 && strikeTimer < 0 && !SkillTreeDisabled && GameManager.Main.CrushingStrike)
             {
                 baseDamage = ogBD;
@@ -112,7 +139,23 @@ namespace AEK
                 chargedHit = ogCD;
             }
 
-           
+            if (onFire && fireTick >= 2)
+            {
+                onFire = false;
+            }
+
+            if (onFire)
+            {
+                if(fireTick > tickMark)
+                {
+                  tickMark = tickMark + tickInt;
+                  Enemy.Main.TakeDamage(.5f);
+
+                    Debug.Log("Burned");
+                }
+
+            }
+
 
             if (Input.GetKeyDown(KeyCode.X) || dodgeInputDelay>0)
             {
@@ -138,17 +181,53 @@ namespace AEK
             inLightStrike = m_Animator.GetCurrentAnimatorStateInfo(0).IsName("LightStrike") || m_Animator.GetCurrentAnimatorStateInfo(0).IsName("LightStrikeAlt");
             if (!lightStrikeStore && inLightStrike && !SkillTreeDisabled && GameManager.Main.SwordGuan)
             {
+                if (GameManager.Main.PracticedSword)
+                {
+                    numNeeded = Random.Range(0, 200);
+                    if (numNeeded <= critChance)
+                    {
+                        Debug.Log("Crit!");
+                        baseDamage = baseDamage * 2;
+                        justCrit = true;
+                    }
+                }
+
                 print("DAMAGE" + Time.time);
                 Enemy.Main.TakeDamage(baseDamage);
                 strikeTimer = 1;
 
-                baseDamage = baseDamage + (baseDamage * .05f);
+                if (GameManager.Main.PracticedSword && justCrit)
+                {
+                    baseDamage = baseDamage /2;
+                    justCrit = false;
+                }
+                
+
+                baseDamage = baseDamage + (baseDamage * .025f);
             }
 
             else if(!lightStrikeStore && inLightStrike)
             {
+                if (GameManager.Main.PracticedSword)
+                {
+                    numNeeded = Random.Range(0, 200);
+                    if (numNeeded <= critChance)
+                    {
+                        Debug.Log("Crit!");
+                        baseDamage = baseDamage * 2;
+                        justCrit = true;
+                    }
+                }
+
                 print("DAMAGE" + Time.time);
                 Enemy.Main.TakeDamage(baseDamage);
+
+                if (GameManager.Main.PracticedSword && justCrit)
+                {
+                    baseDamage = ogBD;
+                    justCrit = false;
+                }
+
             }
 
 
@@ -263,10 +342,36 @@ namespace AEK
             m_Animator.ResetTrigger("HeavyStrike");
             m_Animator.SetTrigger("HeavyStrike");
 
-            if (!BSwing)
+            if (GameManager.Main.QuickEvasion)
             {
-                Enemy.Main.TakeDamage(chargedHit);
-                Debug.Log("Heavy Strike");
+                evadeUp = true;
+                evasionTime = .25f;
+            }
+
+            if (GameManager.Main.PracticedSword)
+            {
+                numNeeded = Random.Range(0, 100);
+                if(numNeeded <= critChance)
+                {
+                    Debug.Log("Crit!");
+                    chargedHit = chargedHit * 2;
+                }
+            }
+
+            Enemy.Main.TakeDamage(chargedHit);
+            Debug.Log("Heavy Strike");
+
+            if (GameManager.Main.PracticedSword)
+            {
+                    chargedHit = ogCD;
+            }
+
+
+            if (GameManager.Main.StaggeringBlow)
+            {
+                onFire = true;
+                fireTick = 0;
+                tickMark = .5f;
             }
 
         }
@@ -276,10 +381,28 @@ namespace AEK
             m_Animator.ResetTrigger("DodgeStrike");
             m_Animator.SetTrigger("DodgeStrike");
 
-            if (!BSwing)
+            if (GameManager.Main.QuickEvasion)
             {
-                Enemy.Main.TakeDamage(baseDamage);
-                Debug.Log("Dodge Strike");
+                evadeUp = true;
+                evasionTime = .25f;
+            }
+
+            if (GameManager.Main.PracticedSword)
+            {
+                numNeeded = Random.Range(0, 100);
+                if (numNeeded <= critChance)
+                {
+                    Debug.Log("Crit!");
+                    baseDamage = baseDamage * 2;
+                }
+            }
+
+            Enemy.Main.TakeDamage(baseDamage);
+            Debug.Log("Dodge Strike");
+
+            if (GameManager.Main.PracticedSword)
+            {
+                baseDamage = ogBD;
             }
 
             if (!SkillTreeDisabled && GameManager.Main.CrushingStrike)
@@ -304,6 +427,8 @@ namespace AEK
 
         public bool CanDeflect()
         {
+            if (evadeUp)
+                return true;
             if (inLightStrike)
                 return false;
             if (PCharge)
@@ -362,6 +487,17 @@ namespace AEK
             m_Animator.ResetTrigger("Block");
             m_Animator.SetTrigger("Block");
 
+            if (GameManager.Main.Thornmail)
+            {
+                blockCounter++;
+
+                if(blockCounter >= 10)
+                {
+                    newHeart = true;
+                    blockCounter = 0;
+                }
+            }
+
             if (blockParticles.isPlaying)
             {
                 blockParticles.Stop();
@@ -377,6 +513,12 @@ namespace AEK
         {
             m_Animator.ResetTrigger("Dodge");
             m_Animator.SetTrigger("Dodge");
+
+            if (GameManager.Main.QuickEvasion)
+            {
+                evadeUp = true;
+                evasionTime = .25f;
+            }
 
             SFXManager.main.Play(dodgeClip, .7f, 1, .1f, 0);
             canDS = true;
@@ -408,7 +550,11 @@ namespace AEK
                 m_Animator.ResetTrigger("DodgeStrike");
 
                 SFXManager.main.Play(hitByEnemyClip, .7f, 1, 0, .07f);
-                LoseHeart();
+                if (!newHeart)
+                {
+                    LoseHeart();
+                }
+                newHeart = false;
             }
         }
 
