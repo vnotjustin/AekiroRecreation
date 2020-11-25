@@ -33,6 +33,7 @@ public class ParallaxManager : MonoBehaviour
         {
             Vector3 position = transform.position;
             position.x = i * unityUnitWidth;
+            position.y = 0;
             spriteTransforms[i].localPosition = position;
         }
     }
