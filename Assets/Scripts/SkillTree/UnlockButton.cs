@@ -6,9 +6,6 @@ using UnityEngine.UI;
 
 public class UnlockButton : MonoBehaviour
 {
-    public Image iconImage;
-    public Sprite nonequippedSprite;
-    public Sprite equippedSprite;
 
     // Start is called before the first frame update
     void Start()
@@ -16,149 +13,60 @@ public class UnlockButton : MonoBehaviour
         
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        
 
+
+    }
 
     public void UnlockAbility()
     {
-        if (this.tag == "SwiftStrikes")
+        if (this.tag == "SwiftStrikes" && GameManager.Main.crystals >= 1)
         {
-            if (!GameManager.Main.SwiftStrikes && GameManager.Main.crystals >= 1)
-            {
-                GameManager.Main.crystals = GameManager.Main.crystals - 1;
-                GameManager.Main.SwiftStrikes = true;
-                SetUsed(true);
-            }
-            else
-            {
-                GameManager.Main.SwiftStrikes = false;
-                GameManager.Main.crystals = GameManager.Main.crystals + 1;
-                SetUsed(false);
-            }       
+            GameManager.Main.crystals = GameManager.Main.crystals - 1;
+            GameManager.Main.SwiftStrikes = true;
         }
-        if (this.tag == "BlessingZhang")
+        if (this.tag == "BlessingZhang" && GameManager.Main.crystals >= 2)
         {
-            if (!GameManager.Main.BlessingZhang && GameManager.Main.crystals >= 2)
-            {
-                GameManager.Main.crystals = GameManager.Main.crystals - 2;
-                GameManager.Main.BlessingZhang = true;
-                SetUsed(true);
-            }
-            else
-            {
-                GameManager.Main.BlessingZhang = false;
-                GameManager.Main.crystals = GameManager.Main.crystals + 2;
-                SetUsed(false);
-            }
+            GameManager.Main.crystals = GameManager.Main.crystals - 2;
+            GameManager.Main.BlessingZhang = true;
         }
-        if (this.tag == "SwordGuan")
+        if (this.tag == "SwordGuan" && GameManager.Main.crystals >= 3)
         {
-            if (!GameManager.Main.SwordGuan && GameManager.Main.crystals >= 3)
-            {
-                GameManager.Main.crystals = GameManager.Main.crystals - 3;
-                GameManager.Main.SwordGuan = true;
-                SetUsed(true);
-            }
-            else
-            {
-                GameManager.Main.SwordGuan = false;
-                GameManager.Main.crystals = GameManager.Main.crystals + 3;
-                SetUsed(false);
-            }
+            GameManager.Main.crystals = GameManager.Main.crystals - 3;
+            GameManager.Main.SwordGuan = true;
         }
-        if (this.tag == "StaggeringBlow")
+        if (this.tag == "StaggeringBlow" && GameManager.Main.crystals >= 1)
         {
-            if (!GameManager.Main.StaggeringBlow && GameManager.Main.crystals >= 1)
-            {
-                GameManager.Main.crystals = GameManager.Main.crystals - 1;
-                GameManager.Main.StaggeringBlow = true;
-                SetUsed(true);
-            }
-            else
-            {
-                GameManager.Main.StaggeringBlow = false;
-                GameManager.Main.crystals = GameManager.Main.crystals + 1;
-                SetUsed(false);
-            }
+            GameManager.Main.crystals = GameManager.Main.crystals - 1;
+            GameManager.Main.StaggeringBlow = true;
         }
-        if (this.tag == "PracticedSword")
+        if (this.tag == "PracticedSword" && GameManager.Main.crystals >= 2)
         {
-            if (!GameManager.Main.PracticedSword && GameManager.Main.crystals >= 2)
-            {
-                GameManager.Main.crystals = GameManager.Main.crystals - 2;
-                GameManager.Main.PracticedSword = true;
-                SetUsed(true);
-            }
-            else
-            {
-                GameManager.Main.PracticedSword = false;
-                GameManager.Main.crystals = GameManager.Main.crystals + 2;
-                SetUsed(false);
-            }
+            GameManager.Main.crystals = GameManager.Main.crystals - 2;
+            GameManager.Main.PracticedSword = true;
         }
-        if (this.tag == "CrushingStrike")
+        if (this.tag == "CrushingStrike" && GameManager.Main.crystals >= 3)
         {
-            if (!GameManager.Main.CrushingStrike && GameManager.Main.crystals >= 3)
-            {
-                GameManager.Main.crystals = GameManager.Main.crystals - 3;
-                GameManager.Main.CrushingStrike = true;
-                SetUsed(true);
-            }
-            else
-            {
-                GameManager.Main.CrushingStrike = false;
-                GameManager.Main.crystals = GameManager.Main.crystals + 3;
-                SetUsed(false);
-            }
+            GameManager.Main.crystals = GameManager.Main.crystals - 3;
+            GameManager.Main.CrushingStrike = true;
         }
-        if (this.tag == "QuickEvasion")
+        if (this.tag == "QuickEvasion" && GameManager.Main.crystals >= 1)
         {
-            if (!GameManager.Main.QuickEvasion && GameManager.Main.crystals >= 1)
-            {
-                GameManager.Main.crystals = GameManager.Main.crystals - 1;
-                GameManager.Main.QuickEvasion = true;
-                SetUsed(true);
-            }
-            else
-            {
-                GameManager.Main.QuickEvasion = false;
-                GameManager.Main.crystals = GameManager.Main.crystals + 1;
-                SetUsed(false);
-            }
+            GameManager.Main.crystals = GameManager.Main.crystals - 1;
+            GameManager.Main.QuickEvasion = true;
         }
-        if (this.tag == "ProtectionofDivine")
+        if (this.tag == "ProtectionofDivine" && GameManager.Main.crystals >= 2)
         {
-            if (!GameManager.Main.ProtectionofDivine && GameManager.Main.crystals >= 2)
-            {
-                GameManager.Main.crystals = GameManager.Main.crystals - 2;
-                GameManager.Main.ProtectionofDivine = true;
-                SetUsed(true);
-            }
-            else
-            {
-                GameManager.Main.ProtectionofDivine = false;
-                GameManager.Main.crystals = GameManager.Main.crystals + 2;
-                SetUsed(false);
-            }
+            GameManager.Main.crystals = GameManager.Main.crystals - 2;
+            GameManager.Main.ProtectionofDivine = true;
         }
-        if (this.tag == "Thornmail")
+        if (this.tag == "Thornmail" && GameManager.Main.crystals >= 3)
         {
-            if (!GameManager.Main.Thornmail && GameManager.Main.crystals >= 3)
-            {
-                GameManager.Main.crystals = GameManager.Main.crystals - 3;
-                GameManager.Main.Thornmail = true;
-                SetUsed(true);
-            }
-            else
-            {
-                GameManager.Main.Thornmail = false;
-                GameManager.Main.crystals = GameManager.Main.crystals + 3;
-                SetUsed(false);
-            }
+            GameManager.Main.crystals = GameManager.Main.crystals - 3;
+            GameManager.Main.Thornmail = true;
         }
-    }
-
-    public void SetUsed(bool used)
-    {
-        iconImage.sprite = used ? equippedSprite : nonequippedSprite;
     }
 }

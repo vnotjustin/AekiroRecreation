@@ -11,14 +11,12 @@ public class SkillTreeAni : MonoBehaviour
     public GameObject SkillTree;
     public GameObject DisplayText;
 
-    public float targetY;
-
     private bool canMove;
 
     void Start()
     {
         canMove = false;
-        target = new Vector2(SkillTree.transform.position.x, targetY);
+        target = new Vector2(SkillTree.transform.position.x, 500.0f);
         position = SkillTree.transform.position;
 
         cam = Camera.main;
@@ -34,8 +32,8 @@ public class SkillTreeAni : MonoBehaviour
     {
         if (canMove) {
             float step = speed * Time.deltaTime;
-            float a = Mathf.Lerp(SkillTree.transform.position.y, targetY / 2f, step);
-            float b = Mathf.Lerp(DisplayText.transform.position.y, targetY / 2f, step);
+            float a = Mathf.Lerp(SkillTree.transform.position.y, target.y / 2f, step);
+            float b = Mathf.Lerp(DisplayText.transform.position.y, target.y / 2f, step);
 
             SkillTree.transform.position = new Vector3(SkillTree.transform.position.x, a, SkillTree.transform.position.z);
             DisplayText.transform.position = new Vector3(DisplayText.transform.position.x, b, DisplayText.transform.position.z);
