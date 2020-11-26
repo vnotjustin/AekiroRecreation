@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: 92e5b6ec2e82e674fa2ee93d7aaea199
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5182374964898208368
+    second: Watcher-Loop1a_0
+  - first:
+      213: 880836921692279252
+    second: Watcher-Loop1a_1
+  - first:
+      213: -7179126609057067194
+    second: Watcher-Loop1a_2
+  - first:
+      213: 3925614490973027493
+    second: Watcher-Loop1a_3
+  - first:
+      213: 6833929639562408787
+    second: Watcher-Loop1a_4
+  - first:
+      213: 5364819256669020489
+    second: Watcher-Loop1a_5
+  - first:
+      213: 72527410058045347
+    second: Watcher-Loop1a_6
+  - first:
+      213: 8877104773057605042
+    second: Watcher-Loop1a_7
+  - first:
+      213: -2363481574976103659
+    second: Watcher-Loop1a_8
+  - first:
+      213: -3658340502864625539
+    second: Watcher-Loop1a_9
+  - first:
+      213: 7933774766296388280
+    second: Watcher-Loop1a_10
+  - first:
+      213: -7299128082278031778
+    second: Watcher-Loop1a_0
+  - first:
+      213: 788367441672957944
+    second: Watcher-Loop1a_1
+  - first:
+      213: -2461604430752672810
+    second: Watcher-Loop1a_2
+  - first:
+      213: 2335677696209917579
+    second: Watcher-Loop1a_3
+  - first:
+      213: 1270173326567651856
+    second: Watcher-Loop1a_4
+  - first:
+      213: -7869188479504561972
+    second: Watcher-Loop1a_5
+  - first:
+      213: -308331769911912741
+    second: Watcher-Loop1a_6
+  - first:
+      213: -3285983091860827312
+    second: Watcher-Loop1a_7
+  - first:
+      213: 8292138897367935326
+    second: Watcher-Loop1a_8
+  - first:
+      213: -8539189809754931582
+    second: Watcher-Loop1a_9
+  - first:
+      213: 708664063027185941
+    second: Watcher-Loop1a_10
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Watcher-Loop1a_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1521
+        width: 545
+        height: 447
+      alignment: 9
+      pivot: {x: 0.22124594, y: 0.068273626}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5e5dbd7ea944ba90800000000000000
+      internalID: -7299128082278031778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1a_1
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 1521
+        width: 545
+        height: 445
+      alignment: 9
+      pivot: {x: 0.22519822, y: 0.06555916}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff6661e208d0fa00800000000000000
+      internalID: 788367441672957944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1a_2
+      rect:
+        serializedVersion: 2
+        x: 3064
+        y: 1521
+        width: 543
+        height: 445
+      alignment: 9
+      pivot: {x: 0.21753335, y: 0.071122825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d39577ffcf96ddd0800000000000000
+      internalID: -2461604430752672810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1a_3
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1027
+        width: 545
+        height: 445
+      alignment: 9
+      pivot: {x: 0.22268562, y: 0.069314264}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8615606d7ef96020800000000000000
+      internalID: 2335677696209917579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1a_4
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 1027
+        width: 1497
+        height: 445
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01abd3d29ef80a110800000000000000
+      internalID: 1270173326567651856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1a_5
+      rect:
+        serializedVersion: 2
+        x: 3061
+        y: 1027
+        width: 1500
+        height: 445
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8c88845c60bc290800000000000000
+      internalID: -7869188479504561972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1a_6
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 533
+        width: 1500
+        height: 445
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd6de6d83e598bbf0800000000000000
+      internalID: -308331769911912741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1a_7
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 529
+        width: 1484
+        height: 451
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05312bfa9c7d562d0800000000000000
+      internalID: -3285983091860827312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1a_8
+      rect:
+        serializedVersion: 2
+        x: 3061
+        y: 522
+        width: 1493
+        height: 458
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59a0ddb468931370800000000000000
+      internalID: 8292138897367935326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1a_9
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 12
+        width: 1504
+        height: 474
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28efbef4c14be7980800000000000000
+      internalID: -8539189809754931582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1a_10
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 8
+        width: 1508
+        height: 478
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51902dde53ea5d900800000000000000
+      internalID: 708664063027185941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
