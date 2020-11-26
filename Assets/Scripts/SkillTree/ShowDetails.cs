@@ -44,13 +44,13 @@ public class ShowDetails : MonoBehaviour
         if(this.tag == "SwiftStrikes" && thisButton)
         {
             title.text = "Swift Strikes";
-            description.text = "Increases light attack damage. Cost 1 crystal.";
+            description.text = "Slightly increases light attack damage. Cost 1 crystal.";
             lockImage.sprite = GameManager.Main.SwiftStrikes ? unequipSpr : equipSpr;
         }
         if (this.tag == "BlessingZhang" && thisButton)
         {
             title.text = "Blessing of Zhang Fei";
-            description.text = "Every 10 light attacks become a heavy attack. Costs 2 crystals.";
+            description.text = "Every 5th light attack deals double damage. Costs 2 crystals.";
             lockImage.sprite = GameManager.Main.BlessingZhang ? unequipSpr : equipSpr;
         }
         if (this.tag == "SwordGuan" && thisButton)

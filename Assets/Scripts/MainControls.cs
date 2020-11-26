@@ -52,6 +52,8 @@ namespace AEK
         public float ogBD;
         public float ogCD;
 
+        bool dealDouble;
+
         //Added by Leo
         public bool SkillTreeDisabled;
 
@@ -102,7 +104,7 @@ namespace AEK
             }
             if (!SkillTreeDisabled && GameManager.Main.SwiftStrikes)
             {
-                baseDamage = 1.25f;
+                baseDamage = 1.1f;
             }
             ogBD = baseDamage;
             ogCD = chargedHit;
@@ -149,7 +151,7 @@ namespace AEK
                 if(fireTick > tickMark)
                 {
                   tickMark = tickMark + tickInt;
-                  Enemy.Main.TakeDamage(.2f);
+                  Enemy.Main.TakeDamage(.1f);
 
                     Debug.Log("Burned");
                 }
@@ -181,18 +183,22 @@ namespace AEK
             inLightStrike = m_Animator.GetCurrentAnimatorStateInfo(0).IsName("LightStrike") || m_Animator.GetCurrentAnimatorStateInfo(0).IsName("LightStrikeAlt");
             if (!lightStrikeStore && inLightStrike && !SkillTreeDisabled && GameManager.Main.SwordGuan)
             {
+                float dmgDealt = baseDamage;
                 if (!SkillTreeDisabled && GameManager.Main.PracticedSword)
                 {
                     numNeeded = Random.Range(0, 200);
                     if (numNeeded <= critChance)
                     {
                         Debug.Log("Crit!");
-                        baseDamage = baseDamage * 2;
+                        dmgDealt = baseDamage * 1.5f;
                         justCrit = true;
                     }
                 }
-
-                print("DAMAGE" + Time.time);
+                if (dealDouble)
+                {
+                    dealDouble = false;
+                    dmgDealt *= 1.75f;
+                }
                 Enemy.Main.TakeDamage(baseDamage);
                 strikeTimer = 1;
 
@@ -205,22 +211,27 @@ namespace AEK
 
                 baseDamage = Mathf.Min(baseDamage + (baseDamage * .025f),ogBD*1.75f);
             }
-
             else if(!lightStrikeStore && inLightStrike)
             {
+                float dmgDealt = baseDamage;
                 if (!SkillTreeDisabled && GameManager.Main.PracticedSword)
                 {
                     numNeeded = Random.Range(0, 200);
                     if (numNeeded <= critChance)
                     {
                         Debug.Log("Crit!");
-                        baseDamage = baseDamage * 2;
+                        dmgDealt = baseDamage * 1.5f;
                         justCrit = true;
                     }
                 }
 
-                print("DAMAGE" + Time.time);
-                Enemy.Main.TakeDamage(baseDamage);
+                if (dealDouble)
+                {
+                    dealDouble = false;
+                    dmgDealt *= 1.75f;
+                }
+
+                Enemy.Main.TakeDamage(dmgDealt);
 
                 if (!SkillTreeDisabled && GameManager.Main.PracticedSword && justCrit)
                 {
@@ -271,15 +282,12 @@ namespace AEK
                     timeLeft = chargeTime;
                     strikeCounter++;
 
-                    if (strikeCounter == 10 && !SkillTreeDisabled && GameManager.Main.BlessingZhang)
+                    if (strikeCounter == 5 && !SkillTreeDisabled && GameManager.Main.BlessingZhang)
                     {
-                        HeavyStrike();
+                        dealDouble = true;
                         strikeCounter = 0;
                     }
-                    else
-                    { 
-                        LiStrike(); 
-                    }
+                    LiStrike();
 
                 }
 
