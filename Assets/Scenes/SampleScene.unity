@@ -3706,6 +3706,7 @@ GameObject:
   - component: {fileID: 973607953}
   - component: {fileID: 973607954}
   - component: {fileID: 973607955}
+  - component: {fileID: 973607956}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Untagged
@@ -3856,6 +3857,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &973607956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973607951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55f1712e41958f4f830f8c10891ee5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerAnimator: {fileID: 973607953}
+  LightSlashMarker: {fileID: 612710526852244352, guid: 1c448795cd2c8e240b53b9aa7bb72dcf, type: 3}
+  DodgeSlashMarker: {fileID: 3458172931593308846, guid: 0d51d138584d0444c866ee309044cd2b, type: 3}
 --- !u!1 &985637853
 GameObject:
   m_ObjectHideFlags: 0

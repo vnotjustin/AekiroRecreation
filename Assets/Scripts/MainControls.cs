@@ -181,7 +181,7 @@ namespace AEK
             inLightStrike = m_Animator.GetCurrentAnimatorStateInfo(0).IsName("LightStrike") || m_Animator.GetCurrentAnimatorStateInfo(0).IsName("LightStrikeAlt");
             if (!lightStrikeStore && inLightStrike && !SkillTreeDisabled && GameManager.Main.SwordGuan)
             {
-                if (GameManager.Main.PracticedSword)
+                if (!SkillTreeDisabled && GameManager.Main.PracticedSword)
                 {
                     numNeeded = Random.Range(0, 200);
                     if (numNeeded <= critChance)
@@ -196,7 +196,7 @@ namespace AEK
                 Enemy.Main.TakeDamage(baseDamage);
                 strikeTimer = 1;
 
-                if (GameManager.Main.PracticedSword && justCrit)
+                if (!SkillTreeDisabled && GameManager.Main.PracticedSword && justCrit)
                 {
                     baseDamage = baseDamage /2;
                     justCrit = false;
@@ -208,7 +208,7 @@ namespace AEK
 
             else if(!lightStrikeStore && inLightStrike)
             {
-                if (GameManager.Main.PracticedSword)
+                if (!SkillTreeDisabled && GameManager.Main.PracticedSword)
                 {
                     numNeeded = Random.Range(0, 200);
                     if (numNeeded <= critChance)
@@ -222,7 +222,7 @@ namespace AEK
                 print("DAMAGE" + Time.time);
                 Enemy.Main.TakeDamage(baseDamage);
 
-                if (GameManager.Main.PracticedSword && justCrit)
+                if (!SkillTreeDisabled && GameManager.Main.PracticedSword && justCrit)
                 {
                     baseDamage = ogBD;
                     justCrit = false;
@@ -342,13 +342,13 @@ namespace AEK
             m_Animator.ResetTrigger("HeavyStrike");
             m_Animator.SetTrigger("HeavyStrike");
 
-            if (GameManager.Main.QuickEvasion)
+            if (!SkillTreeDisabled && GameManager.Main.QuickEvasion)
             {
                 evadeUp = true;
                 evasionTime = .25f;
             }
 
-            if (GameManager.Main.PracticedSword)
+            if (!SkillTreeDisabled && GameManager.Main.PracticedSword)
             {
                 numNeeded = Random.Range(0, 100);
                 if(numNeeded <= critChance)
@@ -361,13 +361,13 @@ namespace AEK
             Enemy.Main.TakeDamage(chargedHit);
             Debug.Log("Heavy Strike");
 
-            if (GameManager.Main.PracticedSword)
+            if (!SkillTreeDisabled && GameManager.Main.PracticedSword)
             {
                     chargedHit = ogCD;
             }
 
 
-            if (GameManager.Main.StaggeringBlow)
+            if (!SkillTreeDisabled && GameManager.Main.StaggeringBlow)
             {
                 onFire = true;
                 fireTick = 0;
@@ -381,13 +381,13 @@ namespace AEK
             m_Animator.ResetTrigger("DodgeStrike");
             m_Animator.SetTrigger("DodgeStrike");
 
-            if (GameManager.Main.QuickEvasion)
+            if (!SkillTreeDisabled && GameManager.Main.QuickEvasion)
             {
                 evadeUp = true;
                 evasionTime = .25f;
             }
 
-            if (GameManager.Main.PracticedSword)
+            if (!SkillTreeDisabled && GameManager.Main.PracticedSword)
             {
                 numNeeded = Random.Range(0, 100);
                 if (numNeeded <= critChance)
@@ -400,7 +400,7 @@ namespace AEK
             Enemy.Main.TakeDamage(baseDamage);
             Debug.Log("Dodge Strike");
 
-            if (GameManager.Main.PracticedSword)
+            if (!SkillTreeDisabled && GameManager.Main.PracticedSword)
             {
                 baseDamage = ogBD;
             }
@@ -487,7 +487,7 @@ namespace AEK
             m_Animator.ResetTrigger("Block");
             m_Animator.SetTrigger("Block");
 
-            if (GameManager.Main.Thornmail)
+            if (!SkillTreeDisabled && GameManager.Main.Thornmail)
             {
                 blockCounter++;
 
@@ -514,7 +514,7 @@ namespace AEK
             m_Animator.ResetTrigger("Dodge");
             m_Animator.SetTrigger("Dodge");
 
-            if (GameManager.Main.QuickEvasion)
+            if (!SkillTreeDisabled && GameManager.Main.QuickEvasion)
             {
                 evadeUp = true;
                 evasionTime = .25f;
