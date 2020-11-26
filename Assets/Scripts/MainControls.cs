@@ -149,7 +149,7 @@ namespace AEK
                 if(fireTick > tickMark)
                 {
                   tickMark = tickMark + tickInt;
-                  Enemy.Main.TakeDamage(.5f);
+                  Enemy.Main.TakeDamage(.2f);
 
                     Debug.Log("Burned");
                 }
@@ -198,12 +198,12 @@ namespace AEK
 
                 if (!SkillTreeDisabled && GameManager.Main.PracticedSword && justCrit)
                 {
-                    baseDamage = baseDamage /2;
+                    baseDamage = ogBD;
                     justCrit = false;
                 }
                 
 
-                baseDamage = baseDamage + (baseDamage * .025f);
+                baseDamage = Mathf.Min(baseDamage + (baseDamage * .025f),ogBD*1.75f);
             }
 
             else if(!lightStrikeStore && inLightStrike)
@@ -271,7 +271,7 @@ namespace AEK
                     timeLeft = chargeTime;
                     strikeCounter++;
 
-                    if (strikeCounter == 5 && !SkillTreeDisabled && GameManager.Main.BlessingZhang)
+                    if (strikeCounter == 10 && !SkillTreeDisabled && GameManager.Main.BlessingZhang)
                     {
                         HeavyStrike();
                         strikeCounter = 0;
@@ -409,7 +409,7 @@ namespace AEK
             {
                 baseDamage = 2f;
                 chargedHit = 4f;
-                dsTimer = 2;
+                dsTimer = 1.5f;
             }
         }
 
@@ -517,7 +517,7 @@ namespace AEK
             if (!SkillTreeDisabled && GameManager.Main.QuickEvasion)
             {
                 evadeUp = true;
-                evasionTime = .25f;
+                evasionTime = .1f;
             }
 
             SFXManager.main.Play(dodgeClip, .7f, 1, .1f, 0);
