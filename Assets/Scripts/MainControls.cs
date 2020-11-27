@@ -79,6 +79,8 @@ namespace AEK
         public AudioClip hitByEnemyClip;
         public AudioClip blockedAttackClip;
         public AudioClip dodgeClip;
+        public AudioClip shieldBreakClip;
+        public AudioClip shieldGainClip;
         [Header("Juice")]
         public ParticleSystem blockParticles;
 
@@ -201,7 +203,9 @@ namespace AEK
                     dealDouble = false;
                     dmgDealt *= 1.75f;
                 }
-                Enemy.Main.TakeDamage(baseDamage);
+                dmgDealt = dmgDealt * Random.Range(.75f, 1.33f);
+                Enemy.Main.TakeDamage(dmgDealt);
+                HitmarkerDisplay.Main.TakeHit(dmgDealt);
                 strikeTimer = 1;
 
                 if (!SkillTreeDisabled && GameManager.Main.PracticedSword && justCrit)
@@ -233,7 +237,9 @@ namespace AEK
                     dmgDealt *= 1.75f;
                 }
 
+                dmgDealt = dmgDealt * Random.Range(.75f, 1.33f);
                 Enemy.Main.TakeDamage(dmgDealt);
+                HitmarkerDisplay.Main.TakeHit(dmgDealt);
 
                 if (!SkillTreeDisabled && GameManager.Main.PracticedSword && justCrit)
                 {
@@ -497,14 +503,16 @@ namespace AEK
         {
             m_Animator.ResetTrigger("Block");
             m_Animator.SetTrigger("Block");
+            JuiceManager.Main.PlayerBlock();
 
             if (!SkillTreeDisabled && GameManager.Main.Thornmail)
             {
                 blockCounter++;
 
-                if(blockCounter >= 10)
+                if(blockCounter >= 15)
                 {
-                    newHeart = true;
+                    canProt = true;
+                    SFXManager.main.Play(shieldGainClip, .7f, 1, 0, .07f);
                     blockCounter = 0;
                 }
             }
@@ -537,13 +545,22 @@ namespace AEK
 
         public void Break()
         {
+            if (pLife == 0)
+            {
+                return;
+            }
             if (canProt)
             {
+                SFXManager.main.Play(shieldBreakClip, .7f, 1, 0, .07f);
+                JuiceManager.Main.PlayerBlock();
                 canProt = false;
+                return;
             }
-
             else
             {
+
+                JuiceManager.Main.PlayerHit();
+
                 pLife--;
                 m_Animator.ResetTrigger("Hit");
                 m_Animator.SetTrigger("Hit");
@@ -552,6 +569,7 @@ namespace AEK
                     CombatControl.Main.Finished = true;
                     CombatControl.Main.DeathProtectedTime = 999f;
                     CombatControl.Main.DefeatAnim.SetTrigger("Play");
+                    CombatControl.Main.Defeat();
                     //dead
                 }
                 m_Animator.ResetTrigger("LightStrike");

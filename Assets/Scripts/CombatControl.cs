@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 namespace AEK
 {
@@ -139,7 +140,7 @@ namespace AEK
         public IEnumerator DefeatIE()
         {
             yield return new WaitForSeconds(4f);
-            Restart();
+            TransitionManager.main.TransitionToScene(0);
         }
 
         public void Victory()
