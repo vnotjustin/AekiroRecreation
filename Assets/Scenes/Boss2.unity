@@ -8314,7 +8314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61caf744648fac4492416a7ccb83d13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isBossOne: 1
+  isBossOne: 0
   Anim: {fileID: 686595401}
   positionOffset: {x: 0, y: 0}
   Life: 200
@@ -8330,19 +8330,25 @@ MonoBehaviour:
   - lifeToTrigger: 251
     phaseChange:
       timeBeforeAnimate: 0
-      animationName: R_Strike1
+      animationName: 01b(old)
       delayTilTutorial: 1
-      tutorialType: 1
+      tutorialType: 2
       delayTilFirstAttack: 1
       firstAttackInPhase:
-        animationName: R_Strike1
+        animationName: 01b(old)
         commonness: 1
         attackNodes:
-        - attackType: 0
+        - attackType: 3
           hitRegisterDelay: 1
           usesSound: 1
-        - attackType: 0
+        - attackType: 3
+          hitRegisterDelay: 1.1
+          usesSound: 1
+        - attackType: 4
           hitRegisterDelay: 1.8
+          usesSound: 1
+        - attackType: 4
+          hitRegisterDelay: 1.9
           usesSound: 1
         postAttackCooldown: 2
         hasChargeSound: 1
@@ -8415,11 +8421,11 @@ MonoBehaviour:
     - animationName: R_Strike1
       commonness: 1
       attackNodes:
-      - attackType: 0
-        hitRegisterDelay: 1
+      - attackType: 1
+        hitRegisterDelay: 1.5
         usesSound: 1
-      - attackType: 0
-        hitRegisterDelay: 1.8
+      - attackType: 1
+        hitRegisterDelay: 1.5
         usesSound: 1
       postAttackCooldown: 1
       hasChargeSound: 1
@@ -10826,7 +10832,7 @@ MonoBehaviour:
   evadeUp: 0
   newHeart: 0
   onFire: 0
-  chargeTime: 1
+  chargeTime: 0.5
   timeLeft: 0
   strikeTimer: 0
   dsTimer: 0
@@ -10841,6 +10847,7 @@ MonoBehaviour:
   ogBD: 0
   ogCD: 0
   SkillTreeDisabled: 1
+  UnlockHeavyForDebugging: 1
   heartRenders:
   - {fileID: 1161215769}
   - {fileID: 1772623311}

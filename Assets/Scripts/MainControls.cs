@@ -55,7 +55,9 @@ namespace AEK
         bool dealDouble;
 
         //Added by Leo
+        [Space]
         public bool SkillTreeDisabled;
+        public bool UnlockHeavyForDebugging;
 
 
         [Space]
@@ -89,7 +91,7 @@ namespace AEK
         // Start is called before the first frame update
         void Start()
         {
-                if (!SkillTreeDisabled && GameManager.Main.heavyUnlocked)
+                if (UnlockHeavyForDebugging || GameManager.Main.heavyUnlocked )
                 {
                     canHeavy = true;
                 }
@@ -367,6 +369,7 @@ namespace AEK
             }
 
             Enemy.Main.TakeDamage(chargedHit);
+            Enemy.Main.HeavyStruck();
             Debug.Log("Heavy Strike");
 
             if (!SkillTreeDisabled && GameManager.Main.PracticedSword)

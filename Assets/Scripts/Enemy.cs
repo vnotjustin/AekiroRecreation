@@ -142,6 +142,11 @@ namespace AEK
             Breaking = 0.1f;
         }
 
+        public void HeavyStruck() 
+        {
+            Anim.SetTrigger("HeavyStruck");
+        }
+
         public IEnumerator Process()
         {
             //yield return ChangePhase(0);
@@ -213,6 +218,7 @@ namespace AEK
                 //Charging Up
                 while (t < currentAttack.hitRegisterDelay && !Broke)
                 {
+                    Debug.Log(Broke);
                     switch (currentAttack.attackType)
                     {
                         case AttackType.Focused:
@@ -501,6 +507,7 @@ namespace AEK
         public float delayTilFirstAttack;
         public EnemyAttack firstAttackInPhase;
     }
+
 
 
 
