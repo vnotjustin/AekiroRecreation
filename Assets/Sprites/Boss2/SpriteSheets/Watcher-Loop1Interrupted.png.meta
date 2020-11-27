@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: 4cdd59cdb355bfa41b5baf04862bffe1
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2421984118573570799
+    second: Watcher-Loop1Interrupted_0
+  - first:
+      213: 5645563100214720206
+    second: Watcher-Loop1Interrupted_1
+  - first:
+      213: 7408442957903411389
+    second: Watcher-Loop1Interrupted_2
+  - first:
+      213: 715591412948199626
+    second: Watcher-Loop1Interrupted_3
+  - first:
+      213: 1101938174722440653
+    second: Watcher-Loop1Interrupted_4
+  - first:
+      213: -5715434457291201025
+    second: Watcher-Loop1Interrupted_5
+  - first:
+      213: 3245556779941225620
+    second: Watcher-Loop1Interrupted_6
+  - first:
+      213: -6342927518923088354
+    second: Watcher-Loop1Interrupted_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +65,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +97,189 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 569
+        width: 750
+        height: 457
+      alignment: 9
+      pivot: {x: 0.15954937, y: 0.05912597}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115e8c0c642636ed0800000000000000
+      internalID: -2421984118573570799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted_1
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 569
+        width: 753
+        height: 457
+      alignment: 9
+      pivot: {x: 0.15635075, y: 0.06334915}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec6f9596ab1195e40800000000000000
+      internalID: 5645563100214720206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted_2
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 569
+        width: 757
+        height: 457
+      alignment: 9
+      pivot: {x: 0.15692969, y: 0.06372885}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8b39c5e9310d660800000000000000
+      internalID: 7408442957903411389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted_3
+      rect:
+        serializedVersion: 2
+        x: 2510
+        y: 569
+        width: 779
+        height: 487
+      alignment: 9
+      pivot: {x: 0.1540402, y: 0.058841903}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8e815499a4ee900800000000000000
+      internalID: 715591412948199626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 24
+        width: 798
+        height: 499
+      alignment: 9
+      pivot: {x: 0.14988321, y: 0.0813243}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcdf5cc7eeeda4f00800000000000000
+      internalID: 1101938174722440653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted_5
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 14
+        width: 808
+        height: 509
+      alignment: 9
+      pivot: {x: 0.14825764, y: 0.09750148}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5612c84a2bea0b0800000000000000
+      internalID: -5715434457291201025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted_6
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 9
+        width: 813
+        height: 516
+      alignment: 9
+      pivot: {x: 0.14738871, y: 0.107040286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 494e1c612b88a0d20800000000000000
+      internalID: 3245556779941225620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted_7
+      rect:
+        serializedVersion: 2
+        x: 2510
+        y: 35
+        width: 543
+        height: 456
+      alignment: 9
+      pivot: {x: 0.2211298, y: 0.058291987}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e1a8e170569f7a0800000000000000
+      internalID: -6342927518923088354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
