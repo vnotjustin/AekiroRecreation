@@ -43,31 +43,31 @@ public class ShowDetails : MonoBehaviour
 
         if(this.tag == "SwiftStrikes" && thisButton)
         {
-            title.text = "Swift Strikes";
+            title.text = "Swift Slashes";
             description.text = "Slightly increases light attack damage. Cost 1 crystal.";
             lockImage.sprite = GameManager.Main.SwiftStrikes ? unequipSpr : equipSpr;
         }
         if (this.tag == "BlessingZhang" && thisButton)
         {
-            title.text = "Blessing of Zhang Fei";
+            title.text = "Thundercloud";
             description.text = "Every 5th light attack deals double damage. Costs 2 crystals.";
             lockImage.sprite = GameManager.Main.BlessingZhang ? unequipSpr : equipSpr;
         }
         if (this.tag == "SwordGuan" && thisButton)
         {
-            title.text = "Sword of Guan Yu";
+            title.text = "Blade Dance";
             description.text = "Consecutive strikes deal slightly more damage with each attack. Costs 3 crystals.";
             lockImage.sprite = GameManager.Main.SwordGuan ? unequipSpr : equipSpr;
         }
         if (this.tag == "StaggeringBlow" && thisButton)
         {
-            title.text = "Staggering Blow";
+            title.text = "Searing Blow";
             description.text = "Heavy attacks now do burn damage for 2 seconds. Costs 1 crystal.";
             lockImage.sprite = GameManager.Main.StaggeringBlow ? unequipSpr : equipSpr;
         }
         if (this.tag == "PracticedSword" && thisButton)
         {
-            title.text = "Practiced Swordsman";
+            title.text = "Cobra Bites";
             description.text = "All attacks can now critically strike. Costs 2 crystals.";
             lockImage.sprite = GameManager.Main.PracticedSword ? unequipSpr : equipSpr;
         }
@@ -85,7 +85,7 @@ public class ShowDetails : MonoBehaviour
         }
         if (this.tag == "ProtectionofDivine" && thisButton)
         {
-            title.text = "Protection of the Divine";
+            title.text = "Divine Protection";
             description.text = "Start fight with shield that blocks first hit attack. Costs 2 crystals.";
             lockImage.sprite = GameManager.Main.ProtectionofDivine ? unequipSpr : equipSpr;
         }

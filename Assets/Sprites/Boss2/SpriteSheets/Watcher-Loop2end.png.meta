@@ -1,7 +1,79 @@
 fileFormatVersion: 2
 guid: 9efc2ed528895104a864ecc429a9cc4a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8763491081430417631
+    second: Watcher-Loop2end_0
+  - first:
+      213: -7912523943629137426
+    second: Watcher-Loop2end_1
+  - first:
+      213: 2902729870277028882
+    second: Watcher-Loop2end_2
+  - first:
+      213: -583189418447940621
+    second: Watcher-Loop2end_3
+  - first:
+      213: -4007082996066874566
+    second: Watcher-Loop2end_4
+  - first:
+      213: -3096244223943224398
+    second: Watcher-Loop2end_5
+  - first:
+      213: 5221437157210990605
+    second: Watcher-Loop2end_6
+  - first:
+      213: -2021178370021183179
+    second: Watcher-Loop2end_7
+  - first:
+      213: 1980768895341546421
+    second: Watcher-Loop2end_8
+  - first:
+      213: -2068707071486931384
+    second: Watcher-Loop2end_9
+  - first:
+      213: -418961081860296802
+    second: Watcher-Loop2end_10
+  - first:
+      213: 1135880808026262473
+    second: Watcher-Loop2end_11
+  - first:
+      213: -1762505628098921185
+    second: Watcher-Loop2end_12
+  - first:
+      213: -3860287922182919458
+    second: Watcher-Loop2end_13
+  - first:
+      213: -5387001428033978823
+    second: Watcher-Loop2end_14
+  - first:
+      213: -4178970719935444279
+    second: Watcher-Loop2end_15
+  - first:
+      213: 2730814666649870384
+    second: Watcher-Loop2end_16
+  - first:
+      213: -5073654492515895389
+    second: Watcher-Loop2end_17
+  - first:
+      213: -5780450664140987028
+    second: Watcher-Loop2end_18
+  - first:
+      213: 8244876261141036918
+    second: Watcher-Loop2end_19
+  - first:
+      213: 4933949425703177814
+    second: Watcher-Loop2end_20
+  - first:
+      213: -6108012160691486044
+    second: Watcher-Loop2end_21
+  - first:
+      213: -9053078745287004118
+    second: Watcher-Loop2end_22
+  - first:
+      213: -161368324367221602
+    second: Watcher-Loop2end_23
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +113,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +145,336 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Watcher-Loop2end_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 2462
+        width: 780
+        height: 701
+      alignment: 9
+      pivot: {x: 0.45913994, y: 0.044913866}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd0c6f425bc2e9970800000000000000
+      internalID: 8763491081430417631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop2end_2
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 2462
+        width: 780
+        height: 701
+      alignment: 9
+      pivot: {x: 0.45927718, y: 0.04471883}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c27cc0071984820800000000000000
+      internalID: 2902729870277028882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop2end_4
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 2462
+        width: 780
+        height: 701
+      alignment: 9
+      pivot: {x: 0.4592642, y: 0.045644198}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b0de9de3bf368c0800000000000000
+      internalID: -4007082996066874566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop2end_6
+      rect:
+        serializedVersion: 2
+        x: 3288
+        y: 2462
+        width: 780
+        height: 701
+      alignment: 9
+      pivot: {x: 0.45994842, y: 0.04495496}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08269c1e65467840800000000000000
+      internalID: 5221437157210990605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop2end_8
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1649
+        width: 780
+        height: 700
+      alignment: 9
+      pivot: {x: 0.45841122, y: 0.045092426}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bbc9f4d0da1d7b10800000000000000
+      internalID: 1980768895341546421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop2end_10
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 1649
+        width: 780
+        height: 700
+      alignment: 9
+      pivot: {x: 0.45938736, y: 0.045718994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9fe005ad1d8f2af0800000000000000
+      internalID: -418961081860296802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop2end_12
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 1649
+        width: 780
+        height: 700
+      alignment: 9
+      pivot: {x: 0.4589437, y: 0.04251639}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d798a28725a87e0800000000000000
+      internalID: -1762505628098921185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop2end_14
+      rect:
+        serializedVersion: 2
+        x: 3298
+        y: 1649
+        width: 770
+        height: 728
+      alignment: 9
+      pivot: {x: 0.45313737, y: 0.044527326}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93e33852eb68d35b0800000000000000
+      internalID: -5387001428033978823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop2end_16
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 837
+        width: 756
+        height: 778
+      alignment: 9
+      pivot: {x: 0.44285986, y: 0.038979735}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030a719887dc5e520800000000000000
+      internalID: 2730814666649870384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop2end_18
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 837
+        width: 951
+        height: 769
+      alignment: 9
+      pivot: {x: 0.24821927, y: 0.039244413}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c65a4324fb6b7cfa0800000000000000
+      internalID: -5780450664140987028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop2end_19
+      rect:
+        serializedVersion: 2
+        x: 2311
+        y: 837
+        width: 955
+        height: 474
+      alignment: 9
+      pivot: {x: 0.25071913, y: 0.06274066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67fbc5ab64fab6270800000000000000
+      internalID: 8244876261141036918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop2end_20
+      rect:
+        serializedVersion: 2
+        x: 3393
+        y: 837
+        width: 671
+        height: 428
+      alignment: 9
+      pivot: {x: 0.37589908, y: 0.07845356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65ec7ca8cd8e87440800000000000000
+      internalID: 4933949425703177814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop2end_21
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 23
+        width: 672
+        height: 428
+      alignment: 9
+      pivot: {x: 0.37231776, y: 0.07928707}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a2c73e2d4bfb3ba0800000000000000
+      internalID: -6108012160691486044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop2end_22
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 23
+        width: 667
+        height: 434
+      alignment: 9
+      pivot: {x: 0.36861756, y: 0.069476254}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20778fa8d00d5280800000000000000
+      internalID: -9053078745287004118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop2end_23
+      rect:
+        serializedVersion: 2
+        x: 2343
+        y: 8
+        width: 635
+        height: 464
+      alignment: 9
+      pivot: {x: 0.35126454, y: 0.089229904}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c771c2d54b2cdf0800000000000000
+      internalID: -161368324367221602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

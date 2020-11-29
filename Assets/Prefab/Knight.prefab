@@ -86,7 +86,7 @@ MonoBehaviour:
   evadeUp: 0
   newHeart: 0
   onFire: 0
-  chargeTime: 1
+  chargeTime: 0.25
   timeLeft: 0
   strikeTimer: 0
   dsTimer: 0

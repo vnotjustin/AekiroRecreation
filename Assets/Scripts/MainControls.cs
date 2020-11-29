@@ -374,9 +374,7 @@ namespace AEK
                 }
             }
 
-            Enemy.Main.TakeDamage(chargedHit);
-            Enemy.Main.HeavyStruck();
-            Debug.Log("Heavy Strike");
+            //HeavyStrikeHits();
 
             if (!SkillTreeDisabled && GameManager.Main.PracticedSword)
             {
@@ -590,6 +588,13 @@ namespace AEK
         public void LoseHeart()
         {
             heartRenders[pLife].SetTrigger("Break");
+        }
+
+        public void HeavyStrikeHits() 
+        {
+            Enemy.Main.TakeDamage(chargedHit);
+            Enemy.Main.HeavyStruck();
+            Debug.Log("Heavy Strike");
         }
 
     }

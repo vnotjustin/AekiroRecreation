@@ -8,7 +8,6 @@ namespace AEK
         public static Enemy Main;
         public bool isBossOne;
 
-
         public enum AttackType
         {
             Normal,
@@ -58,6 +57,7 @@ namespace AEK
         [Space]
         public AudioClip[] hitSounds;
 
+        private float Thispostcooldowntime;
 
         public void Awake()
         {
@@ -145,13 +145,22 @@ namespace AEK
         public void HeavyStruck() 
         {
             Anim.SetTrigger("HeavyStruck");
+            if (!isBossOne) 
+            {
+                Boss2.Main.CompareHeadsChargedTime();
+            }
+        }
+
+        public void HeavyStruck_Reset()
+        {
+            Anim.ResetTrigger("HeavyStruck");
         }
 
         public IEnumerator Process()
         {
             //yield return ChangePhase(0);
             bool inGame = true;
-            while (inGame)
+            while (inGame && isBossOne)
             {
                 print("IN GAME");
 
@@ -278,9 +287,19 @@ namespace AEK
                 currentAttackIndex++;
             }
 
-            yield return new WaitForSeconds(attackType.postAttackCooldown);
-
+            Thispostcooldowntime = 0;
+            while (Thispostcooldowntime < attackType.postAttackCooldown)
+            {
+                Thispostcooldowntime += Time.deltaTime;
+                yield return new WaitForEndOfFrame();
+            }
         }
+
+        public void MakeCooldowntime1sec() 
+        {
+            Thispostcooldowntime = 1;
+        }
+
         EnemyAttack PickAttack()
         {
             float randomRange = TotalCommonValue(allPossibleAttacks);
@@ -506,7 +525,10 @@ namespace AEK
         [Space]
         public float delayTilFirstAttack;
         public EnemyAttack firstAttackInPhase;
+
     }
+
+    
 
 
 
