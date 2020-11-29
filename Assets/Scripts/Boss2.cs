@@ -15,6 +15,20 @@ namespace AEK
         public Boss2Head Head1;
         public Boss2Head Head2;
         public Boss2Head Head3;
+        [Space]
+        [Header("SFX")]
+        public AudioClip laserCharge;
+        public AudioClip laserBreak;
+        public AudioClip laserFire;
+        public AudioClip laserStasised;
+        [Space]
+        public AudioClip unblockableStrike;
+        public AudioClip regStrike;
+        public AudioClip shieldSetup;
+        public AudioClip shieldBreak;
+
+        public AudioSource audioSrc;
+        public int phaseNo;
 
         private void Awake()
         {
@@ -23,22 +37,44 @@ namespace AEK
 
         public void QuickAttackNode_Normal()
         {
+            SFXManager.main.Play(regStrike, .7f, 1, .1f, .1f);
             MainControls.Main.Damaged();
         }
 
         public void QuickAttackNode_Focus()
         {
             MainControls.Main.Break();
+            if (MyAnimator.GetBool("Lasering"))
+            {
+                SFXManager.main.Play(laserFire, .7f, 1, .1f, .05f);
+            }
+            else
+            {
+                SFXManager.main.Play(laserFire, .7f, 1, .1f, .05f);
+            }
+            
         }
 
         public void QuickAttackNode_Stasis()
         {
             MainControls.Main.Stasised();
+            if (MyAnimator.GetBool("Lasering"))
+            {
+                SFXManager.main.Play(laserStasised, .7f, 1, .1f, .05f);
+            }
         }
 
         public void QuickAttack_Unblockable()
         {
             MainControls.Main.AttackedByUnblockable();
+            if (MyAnimator.GetBool("Lasering"))
+            {
+                SFXManager.main.Play(laserFire, .7f, 1, .1f, .05f);
+            }
+            else
+            {
+                SFXManager.main.Play(unblockableStrike, .8f, 1, .1f, .05f);
+            }
         }
 
         public void QuickAttack_HitsDodge()
@@ -61,19 +97,23 @@ namespace AEK
         {
             if (Enemy.Main.Life > 180)
             {
+                phaseNo = 1;
                 MyAnimator.SetInteger("Phase", 1);
             }
             else if (Enemy.Main.Life > 130)
             {
                 MyAnimator.SetInteger("Phase", 2);
+                phaseNo = 2;
             }
             else if (Enemy.Main.Life > 90)
             {
                 MyAnimator.SetInteger("Phase", 3);
+                phaseNo = 3;
             }
             else 
             {
                 MyAnimator.SetInteger("Phase", 4);
+                phaseNo = 4;
             }
         }
 
@@ -123,19 +163,27 @@ namespace AEK
         public void Shielding() 
         {
             MyAnimator.SetBool("Shielding", true);
+            SFXManager.main.Play(shieldSetup, .7f, 1, .1f, .05f);
             Debug.Log("Shield sat true!");
         }
         public void Unshielding()
         {
+            if (MyAnimator.GetBool("Shielding"))
+            {
+                SFXManager.main.Play(shieldBreak, .7f, 1, .1f, .05f);
+            }
             MyAnimator.SetBool("Shielding", false);
+            
         }
         public void Lasering() 
         {
             MyAnimator.SetBool("Lasering", true);
+            PlaySound(audioSrc, laserCharge, .7f, 1, .1f, .05f);
         }
         public void UnLasering()
         {
             MyAnimator.SetBool("Lasering", false);
+           
         }
         public void Tranformed() 
         {
@@ -164,6 +212,28 @@ namespace AEK
             }
         }
 
+        public void LaserBroke()
+        {
+           if (MyAnimator.GetBool("Lasering"))
+            {
+                audioSrc.Stop();
+                SFXManager.main.Play(laserBreak, .8f, 1, .1f, .04f);
+            }
+            else
+            {
+                SFXManager.main.Play(laserBreak, .8f, 1, .1f, .04f);
+            }
+        }
+
+
+
+        public void PlaySound(AudioSource src, AudioClip clip, float vol, float pitch, float volVar, float pitchVar)
+        {
+            src.volume = vol + Random.Range(-volVar, volVar);
+            src.pitch = pitch + Random.Range(-pitchVar, pitchVar);
+            src.clip = clip;
+            src.Play();
+        }
     }
 
 }

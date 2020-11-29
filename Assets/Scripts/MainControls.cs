@@ -44,7 +44,10 @@ namespace AEK
         public float tickInt = .5f;
         public float tickMark = .5f;
         public float evasionTime = .25f;
-    
+
+
+        float invulnTime;
+        float stasisCooldown;
 
         public int numNeeded;
         public int critChance = 25;
@@ -120,6 +123,8 @@ namespace AEK
         // Update is called once per frame
         void Update()
         {
+
+            invulnTime -= Time.deltaTime;
             fireTick += Time.deltaTime;
             strikeTimer -= Time.deltaTime;
             dsTimer -= Time.deltaTime;
@@ -185,6 +190,16 @@ namespace AEK
             bool lightStrikeStore = inLightStrike;
 
             inLightStrike = m_Animator.GetCurrentAnimatorStateInfo(0).IsName("LightStrike") || m_Animator.GetCurrentAnimatorStateInfo(0).IsName("LightStrikeAlt");
+
+            if (inLightStrike)
+            {
+                stasisCooldown = .15f;
+            }
+            else
+            {
+                stasisCooldown -= Time.deltaTime;
+            }
+
             if (!lightStrikeStore && inLightStrike && !SkillTreeDisabled && GameManager.Main.SwordGuan)
             {
                 float dmgDealt = baseDamage;
@@ -455,7 +470,7 @@ namespace AEK
 
         public void Stasised() //Called when the enemy does a stasis attack on the player
         {
-            if (inLightStrike || canDS)
+            if (inLightStrike || canDS || stasisCooldown>0)
             {
 
             }
@@ -467,7 +482,7 @@ namespace AEK
 
         public void MustStasised() //Called when the enemy does a stasis attack on the player
         {
-            if (inLightStrike)
+            if (inLightStrike || stasisCooldown > 0)
             {
 
             }
@@ -543,7 +558,12 @@ namespace AEK
 
         public void Break()
         {
-            if (pLife == 0)
+            if (invulnTime > 0)
+            {
+                return;
+            }
+
+            if (pLife == 0 || CombatControl.Main.Victoried)
             {
                 return;
             }
@@ -556,7 +576,7 @@ namespace AEK
             }
             else
             {
-
+                invulnTime = .75f;
                 JuiceManager.Main.PlayerHit();
 
                 pLife--;

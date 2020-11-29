@@ -63,8 +63,11 @@ namespace AEK
                 if (hideTimer > 4)
                 {
                     hideTimer = 0;
-                    VeryStartBase.SetTrigger("Play");
-                    Tutorial1.SetTrigger("Play");
+                    if (Enemy.Main.isBossOne)
+                    {
+                        VeryStartBase.SetTrigger("Play");
+                        Tutorial1.SetTrigger("Play");
+                    }
                 }
             }
             /*float a = MC.Main.Life;
@@ -105,10 +108,13 @@ namespace AEK
             if (AlreadyStarted && !Victoried)
                 CurrentTime += Time.deltaTime;
 
-            int a = (int)CurrentTime / 60;
-            int b = (int)CurrentTime % 60;
-            TimeText.text = "Time - " + a + ":" + b;
-            DamageText.text = "Damage Taken - " + (7 - MainControls.Main.pLife);
+            if (!Enemy.Main.isBossOne && !Victoried)
+            {
+                int a = (int)CurrentTime / 60;
+                int b = (int)CurrentTime % 60;
+                TimeText.text = "Time - " + a + ":" + b;
+                DamageText.text = "Damage Taken - " + (7 - MainControls.Main.pLife);
+            }
         }
 
         public void StartGame()
@@ -134,6 +140,10 @@ namespace AEK
 
         public void Defeat()
         {
+            if (Victoried)
+            {
+                return;
+            }
             StartCoroutine("DefeatIE");
         }
 
@@ -146,8 +156,15 @@ namespace AEK
         public void Victory()
         {
             Victoried = true;
-            DeathProtectedTime = 34;
+            DeathProtectedTime = 999;
             VictoryAnim.SetTrigger("Play");
+            StartCoroutine(VictoryIE());
+        }
+
+        public IEnumerator VictoryIE()
+        {
+            yield return new WaitForSeconds(9f); 
+            TransitionManager.main.TransitionToNextScene();
         }
 
         public void PlaySound(string Key)

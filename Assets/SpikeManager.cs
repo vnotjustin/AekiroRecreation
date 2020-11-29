@@ -260,7 +260,7 @@ public class SpikeManager : MonoBehaviour
         SFXManager.main.Play(unblockStrike, .6f, 1, .2f, .12f);
         if (MainControls.Main.canDS)
         {
-            MainControls.Main.AttackedAtDodgePosition();
+            MainControls.Main.Break();
         }
         else
         {
@@ -274,7 +274,7 @@ public class SpikeManager : MonoBehaviour
         SFXManager.main.Play(unblockStrike, .6f, 1, .2f, .12f);
         if (MainControls.Main.canDS)
         {
-            MainControls.Main.AttackedAtDodgePosition();
+            MainControls.Main.Break();
         }
         else
         {

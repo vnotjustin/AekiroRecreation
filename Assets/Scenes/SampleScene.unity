@@ -1322,7 +1322,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Time - 0:34
+  m_text: Next Boss
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5fd37d7246b5205408273f4638cc2261, type: 2}
   m_sharedMaterial: {fileID: 227572261467975307, guid: 5fd37d7246b5205408273f4638cc2261, type: 2}
@@ -3715,16 +3715,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896061031}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_Father: {fileID: 2066955804}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -45, y: -18.7}
+  m_AnchoredPosition: {x: -45, y: -0.08000183}
   m_SizeDelta: {x: 8.38, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &896061035
@@ -5362,7 +5362,7 @@ MonoBehaviour:
     m_Bits: 512
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
-  antialiasingMode: 1
+  antialiasingMode: 2
   temporalAntialiasing:
     jitterSpread: 0.75
     sharpness: 0.25
@@ -10573,7 +10573,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Damage Taken - 6
+  m_text: Incoming...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5fd37d7246b5205408273f4638cc2261, type: 2}
   m_sharedMaterial: {fileID: 227572261467975307, guid: 5fd37d7246b5205408273f4638cc2261, type: 2}
@@ -12404,7 +12404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8847403276552071072, guid: b7a9184d54ae8f846bdd4acc2859e46f, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8847403276552071072, guid: b7a9184d54ae8f846bdd4acc2859e46f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13156,6 +13156,7 @@ MonoBehaviour:
   Thornmail: 0
   heavyUnlocked: 0
   crystals: 9
+  beatGame: 0
 --- !u!4 &2007310810
 Transform:
   m_ObjectHideFlags: 0
@@ -13314,6 +13315,7 @@ Transform:
   - {fileID: 35598849}
   - {fileID: 1270749479}
   - {fileID: 49511415}
+  - {fileID: 896061034}
   m_Father: {fileID: 519420032}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13778,6 +13780,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7763112180131304527, guid: 8b53cdccf41aaf749b084ee1930cdc67, type: 3}
+      propertyPath: HeavySlashMarker
+      value: 
+      objectReference: {fileID: 464109187353106775, guid: 067b95e12b5c11e47acf9116dcf03e38, type: 3}
     - target: {fileID: 7763112180131304532, guid: 8b53cdccf41aaf749b084ee1930cdc67, type: 3}
       propertyPath: m_Name
       value: Knight

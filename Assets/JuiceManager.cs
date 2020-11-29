@@ -25,6 +25,14 @@ public class JuiceManager : MonoBehaviour
             ActivateFog();
             finalFightAudioEffects.volume = Mathf.Min(finalFightAudioEffects.volume + Time.deltaTime, .82f);
         }
+        else if (Boss2.Main != null)
+        {
+            if (Boss2.Main.phaseNo == 4)
+            {
+                ActivateFog();
+                finalFightAudioEffects.volume = Mathf.Min(finalFightAudioEffects.volume + Time.deltaTime, .8f);
+            }
+        }
     }
 
     public void PlayerHit()

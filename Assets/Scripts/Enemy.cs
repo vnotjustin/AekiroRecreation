@@ -118,11 +118,13 @@ namespace AEK
             #endregion
 
             //Death
-            if ((Phase == 4 && Life <= 0) || MainControls.Main.pLife <= 0)
+            if (Life<=0)
             {
                 StopAllCoroutines();
-                if (Life <= 0 && !AlreadyDead)
+                if (!AlreadyDead)
+                {
                     Death();
+                }
             }
         }
 
@@ -147,6 +149,7 @@ namespace AEK
             Anim.SetTrigger("HeavyStruck");
             if (!isBossOne) 
             {
+                Boss2.Main.LaserBroke();
                 Boss2.Main.CompareHeadsChargedTime();
             }
         }
@@ -158,6 +161,13 @@ namespace AEK
 
         public IEnumerator Process()
         {
+            if (!isBossOne)
+            {
+                
+                SetTutorial(PhaseChange.TutorialType.FocusedAttack);
+            }
+
+
             //yield return ChangePhase(0);
             bool inGame = true;
             while (inGame && isBossOne)
@@ -412,10 +422,10 @@ namespace AEK
 
         public void Death()
         {
+            print("Dead");
             AlreadyDead = true;
            // MainControls.Main.CurrentTimeStop = 0.1f;
             //MainControls.Main.CurrentSlow = 0.5f;
-            Anim.SetTrigger("Death");
             CombatControl.Main.Finished = true;
             CombatControl.Main.Victory();
             //SoundtrackControl.Main.End();
@@ -428,10 +438,16 @@ namespace AEK
                 case PhaseChange.TutorialType.None:
                     break;
                 case PhaseChange.TutorialType.NormalAttack:
-                    CombatControl.Main.Tutorial1.SetTrigger("Play");
+                    if (CombatControl.Main.Tutorial1 != null)
+                    {
+                        CombatControl.Main.Tutorial1.SetTrigger("Play");
+                    }
                     break;
                 case PhaseChange.TutorialType.FocusedAttack:
-                    CombatControl.Main.Tutorial2.SetTrigger("Play");
+                    if (CombatControl.Main.Tutorial2 != null)
+                    {
+                        CombatControl.Main.Tutorial2.SetTrigger("Play");
+                    }
                     break;
                 case PhaseChange.TutorialType.StasisAttack:
                     CombatControl.Main.Tutorial3.SetTrigger("Play");

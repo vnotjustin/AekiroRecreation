@@ -52,19 +52,19 @@ AnimationClip:
       value: {fileID: -5038328051694368993, guid: 012aac46bdd1147429d191f76475a38f, type: 3}
     - time: 0.25
       value: {fileID: 1239639017462157000, guid: 012aac46bdd1147429d191f76475a38f, type: 3}
-    - time: 2.9166667
+    - time: 3.9166667
       value: {fileID: 2209992804684257818, guid: 012aac46bdd1147429d191f76475a38f, type: 3}
-    - time: 3
+    - time: 4
       value: {fileID: -1627231908221465356, guid: 012aac46bdd1147429d191f76475a38f, type: 3}
-    - time: 3.0833333
+    - time: 4.0833335
       value: {fileID: -2162383728883727110, guid: 012aac46bdd1147429d191f76475a38f, type: 3}
-    - time: 3.1666667
+    - time: 4.1666665
       value: {fileID: 352453724440177811, guid: 012aac46bdd1147429d191f76475a38f, type: 3}
-    - time: 3.25
+    - time: 4.25
       value: {fileID: -2162383728883727110, guid: 012aac46bdd1147429d191f76475a38f, type: 3}
-    - time: 3.3333333
+    - time: 4.3333335
       value: {fileID: -1627231908221465356, guid: 012aac46bdd1147429d191f76475a38f, type: 3}
-    - time: 3.4166667
+    - time: 4.4166665
       value: {fileID: 2209992804684257818, guid: 012aac46bdd1147429d191f76475a38f, type: 3}
     attribute: m_Sprite
     path: 
@@ -108,7 +108,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 3.4333334
+    m_StopTime: 4.4333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -243,27 +243,27 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: Charging
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0
     functionName: CancelStruck
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 3
+  - time: 0
+    functionName: Charging
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 4
     functionName: ChargeEnd
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 3
+  - time: 4
     functionName: QuickAttack_Focus
     data: 
     objectReferenceParameter: {fileID: 0}
