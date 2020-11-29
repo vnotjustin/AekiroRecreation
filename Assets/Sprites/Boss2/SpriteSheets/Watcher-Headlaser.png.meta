@@ -1,0 +1,370 @@
+fileFormatVersion: 2
+guid: 012aac46bdd1147429d191f76475a38f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1016737128569322908
+    second: Watcher-Headlaser_0
+  - first:
+      213: 4040970365386635481
+    second: Watcher-Headlaser_1
+  - first:
+      213: -4148846814011000082
+    second: Watcher-Headlaser_2
+  - first:
+      213: -456653294953130613
+    second: Watcher-Headlaser_3
+  - first:
+      213: 2649375025266309946
+    second: Watcher-Headlaser_4
+  - first:
+      213: -5038328051694368993
+    second: Watcher-Headlaser_5
+  - first:
+      213: 1239639017462157000
+    second: Watcher-Headlaser_6
+  - first:
+      213: 2209992804684257818
+    second: Watcher-Headlaser_7
+  - first:
+      213: -1627231908221465356
+    second: Watcher-Headlaser_8
+  - first:
+      213: -2162383728883727110
+    second: Watcher-Headlaser_9
+  - first:
+      213: 352453724440177811
+    second: Watcher-Headlaser_10
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Watcher-Headlaser_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1782
+        width: 234
+        height: 185
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d3352180d2c1e00800000000000000
+      internalID: 1016737128569322908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Headlaser_1
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 1782
+        width: 233
+        height: 185
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d830c82329641830800000000000000
+      internalID: 4040970365386635481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Headlaser_2
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 1782
+        width: 234
+        height: 185
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeafc5fddc55c66c0800000000000000
+      internalID: -4148846814011000082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Headlaser_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1287
+        width: 233
+        height: 186
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b859ec86f34a9a9f0800000000000000
+      internalID: -456653294953130613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Headlaser_4
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 1045
+        width: 1272
+        height: 428
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b3ac96c8874c420800000000000000
+      internalID: 2649375025266309946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Headlaser_5
+      rect:
+        serializedVersion: 2
+        x: 2744
+        y: 1043
+        width: 1274
+        height: 430
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f170fd8c453441ab0800000000000000
+      internalID: -5038328051694368993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Headlaser_6
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 547
+        width: 1279
+        height: 431
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cecb855e15143110800000000000000
+      internalID: 1239639017462157000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Headlaser_7
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 529
+        width: 1295
+        height: 451
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1adf5f2fb87bae10800000000000000
+      internalID: 2209992804684257818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Headlaser_8
+      rect:
+        serializedVersion: 2
+        x: 2702
+        y: 521
+        width: 1308
+        height: 459
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc474f6339ea69e0800000000000000
+      internalID: -1627231908221465356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Headlaser_9
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 13
+        width: 1324
+        height: 473
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af40dc3947badf1e0800000000000000
+      internalID: -2162383728883727110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Headlaser_10
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 9
+        width: 1327
+        height: 477
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c25058bca24e400800000000000000
+      internalID: 352453724440177811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

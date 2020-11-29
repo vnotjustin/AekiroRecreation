@@ -105,8 +105,8 @@ TextureImporter:
         y: 804
         width: 231
         height: 182
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -143,9 +143,9 @@ TextureImporter:
       name: WatcherWeapon
       rect:
         serializedVersion: 2
-        x: 7
-        y: 457
-        width: 407
+        x: 37
+        y: 476
+        width: 406
         height: 327
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
