@@ -17,9 +17,11 @@ public class ClosingRing : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer > Lifetime / Sprites.Length) 
+        if (timer > Lifetime / Sprites.Length)
         {
-            if (i < Sprites.Length)        }
+            if (i < Sprites.Length)
+            { }
+        }
 
     }
 }

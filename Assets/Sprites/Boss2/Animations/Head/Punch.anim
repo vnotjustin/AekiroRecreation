@@ -654,7 +654,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 2.95
-    functionName: QuicAttack_HitDodge
+    functionName: QuickAttack_Normal
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
