@@ -615,6 +615,7 @@ namespace AEK
             Enemy.Main.TakeDamage(chargedHit);
             Enemy.Main.HeavyStruck();
             Debug.Log("Heavy Strike");
+            RockManager.Main.Spawn(new Vector2(-10, -8), new Vector2(-2, -7), 3);
         }
 
     }
