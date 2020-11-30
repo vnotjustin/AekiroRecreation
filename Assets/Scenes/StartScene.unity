@@ -493,7 +493,7 @@ MonoBehaviour:
   CrushingStrike: 1
   QuickEvasion: 1
   ProtectionofDivine: 1
-  Thornmail: 0
+  Thornmail: 1
   heavyUnlocked: 1
   crystals: 9
 --- !u!4 &223585863
