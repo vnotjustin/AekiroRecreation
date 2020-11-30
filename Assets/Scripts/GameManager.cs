@@ -18,7 +18,9 @@ public class GameManager : MonoBehaviour
 
     public bool heavyUnlocked = false;
 
-    public int crystals = 9;
+    public int crystals = 6;
+
+    public bool beatGame;
 
 
 

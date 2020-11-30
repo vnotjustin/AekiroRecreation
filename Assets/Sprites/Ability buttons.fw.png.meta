@@ -1,0 +1,547 @@
+fileFormatVersion: 2
+guid: 9aebbbe6de050b24c9dcfe001d839ad6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5571468385988136352
+    second: Ability buttons.fw_0
+  - first:
+      213: 1129009644135243750
+    second: Ability buttons.fw_1
+  - first:
+      213: 4098480802409070812
+    second: Ability buttons.fw_2
+  - first:
+      213: 4363545334920690041
+    second: Ability buttons.fw_3
+  - first:
+      213: -5299739642098481907
+    second: Ability buttons.fw_4
+  - first:
+      213: 9203278391709251134
+    second: Ability buttons.fw_5
+  - first:
+      213: -6672751080311040238
+    second: Ability buttons.fw_6
+  - first:
+      213: 2676329894299763324
+    second: Ability buttons.fw_7
+  - first:
+      213: 5065244711644762650
+    second: Ability buttons.fw_8
+  - first:
+      213: 1654956378847685051
+    second: Ability buttons.fw_9
+  - first:
+      213: -6105044372462647480
+    second: Ability buttons.fw_10
+  - first:
+      213: 9087690473703248818
+    second: Ability buttons.fw_11
+  - first:
+      213: -6403052070982155721
+    second: Ability buttons.fw_12
+  - first:
+      213: 1495607942428655413
+    second: Ability buttons.fw_13
+  - first:
+      213: 855304177261543034
+    second: Ability buttons.fw_14
+  - first:
+      213: -6639277791840530501
+    second: Ability buttons.fw_15
+  - first:
+      213: 1868421215705084966
+    second: Ability buttons.fw_16
+  - first:
+      213: -4795596630647859988
+    second: Ability buttons.fw_17
+  - first:
+      213: 6506232202986099664
+    second: Ability buttons.fw_18
+  - first:
+      213: 9004028547910569368
+    second: Ability buttons.fw_19
+  - first:
+      213: 132709872126894412
+    second: Ability buttons.fw_20
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ability buttons.fw_0
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1710
+        width: 225
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062bbd7950b2ea2b0800000000000000
+      internalID: -5571468385988136352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ability buttons.fw_1
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1717
+        width: 225
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6efdba22a4c0baf00800000000000000
+      internalID: 1129009644135243750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ability buttons.fw_2
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 1726
+        width: 231
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd0c95a339ab0e830800000000000000
+      internalID: 4098480802409070812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ability buttons.fw_3
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1408
+        width: 243
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979b241fc5d6e8c30800000000000000
+      internalID: 4363545334920690041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ability buttons.fw_4
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 1411
+        width: 225
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d050aaeefda8376b0800000000000000
+      internalID: -5299739642098481907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ability buttons.fw_5
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 1410
+        width: 225
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36bbdaafec98bf70800000000000000
+      internalID: 9203278391709251134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ability buttons.fw_6
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1098
+        width: 240
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 217d4770f30a563a0800000000000000
+      internalID: -6672751080311040238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ability buttons.fw_7
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1092
+        width: 225
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c720f7bebdb342520800000000000000
+      internalID: 2676329894299763324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ability buttons.fw_8
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 1093
+        width: 225
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a12130a7a3d5b4640800000000000000
+      internalID: 5065244711644762650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ability buttons.fw_9
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 783
+        width: 225
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9abf7ee0697f610800000000000000
+      internalID: 1654956378847685051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ability buttons.fw_10
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 790
+        width: 225
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847cd593d76864ba0800000000000000
+      internalID: -6105044372462647480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ability buttons.fw_11
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 799
+        width: 231
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b398c15656fd1e70800000000000000
+      internalID: 9087690473703248818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ability buttons.fw_12
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 481
+        width: 243
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73287c6f01ac327a0800000000000000
+      internalID: -6403052070982155721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ability buttons.fw_13
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 484
+        width: 225
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53f76b3ef7771c410800000000000000
+      internalID: 1495607942428655413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ability buttons.fw_14
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 483
+        width: 225
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ef49c1e96aedb00800000000000000
+      internalID: 855304177261543034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ability buttons.fw_15
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 171
+        width: 240
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf8434560c8cd3a0800000000000000
+      internalID: -6639277791840530501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ability buttons.fw_16
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 165
+        width: 225
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 624b7e44237fde910800000000000000
+      internalID: 1868421215705084966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ability buttons.fw_17
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 166
+        width: 225
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce49c28c54e927db0800000000000000
+      internalID: -4795596630647859988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -9,6 +9,7 @@ public class ParticleManager : MonoBehaviour
 
     public GameObject LightSlashMarker;
     public GameObject DodgeSlashMarker;
+    public GameObject HeavySlashMarker;
 
     void Awake()
     {
@@ -31,5 +32,10 @@ public class ParticleManager : MonoBehaviour
     public void SpawnDodgeSlashMarker() 
     {
         Instantiate(DodgeSlashMarker);
+    }
+
+    public void SpawnHeavySlashMarker()
+    {
+        Instantiate(HeavySlashMarker);
     }
 }

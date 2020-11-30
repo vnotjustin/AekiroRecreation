@@ -8,7 +8,6 @@ namespace AEK
         public static Enemy Main;
         public bool isBossOne;
 
-
         public enum AttackType
         {
             Normal,
@@ -58,6 +57,7 @@ namespace AEK
         [Space]
         public AudioClip[] hitSounds;
 
+        private float Thispostcooldowntime;
 
         public void Awake()
         {
@@ -118,11 +118,13 @@ namespace AEK
             #endregion
 
             //Death
-            if ((Phase == 4 && Life <= 0) || MainControls.Main.pLife <= 0)
+            if (Life<=0)
             {
                 StopAllCoroutines();
-                if (Life <= 0 && !AlreadyDead)
+                if (!AlreadyDead)
+                {
                     Death();
+                }
             }
         }
 
@@ -142,11 +144,33 @@ namespace AEK
             Breaking = 0.1f;
         }
 
+        public void HeavyStruck() 
+        {
+            Anim.SetTrigger("HeavyStruck");
+            if (!isBossOne) 
+            {
+                Boss2.Main.LaserBroke();
+                Boss2.Main.CompareHeadsChargedTime();
+            }
+        }
+
+        public void HeavyStruck_Reset()
+        {
+            Anim.ResetTrigger("HeavyStruck");
+        }
+
         public IEnumerator Process()
         {
+            if (!isBossOne)
+            {
+                
+                SetTutorial(PhaseChange.TutorialType.FocusedAttack);
+            }
+
+
             //yield return ChangePhase(0);
             bool inGame = true;
-            while (inGame)
+            while (inGame && isBossOne)
             {
                 print("IN GAME");
 
@@ -213,6 +237,7 @@ namespace AEK
                 //Charging Up
                 while (t < currentAttack.hitRegisterDelay && !Broke)
                 {
+                    Debug.Log(Broke);
                     switch (currentAttack.attackType)
                     {
                         case AttackType.Focused:
@@ -272,9 +297,19 @@ namespace AEK
                 currentAttackIndex++;
             }
 
-            yield return new WaitForSeconds(attackType.postAttackCooldown);
-
+            Thispostcooldowntime = 0;
+            while (Thispostcooldowntime < attackType.postAttackCooldown)
+            {
+                Thispostcooldowntime += Time.deltaTime;
+                yield return new WaitForEndOfFrame();
+            }
         }
+
+        public void MakeCooldowntime1sec() 
+        {
+            Thispostcooldowntime = 1;
+        }
+
         EnemyAttack PickAttack()
         {
             float randomRange = TotalCommonValue(allPossibleAttacks);
@@ -387,10 +422,10 @@ namespace AEK
 
         public void Death()
         {
+            print("Dead");
             AlreadyDead = true;
            // MainControls.Main.CurrentTimeStop = 0.1f;
             //MainControls.Main.CurrentSlow = 0.5f;
-            Anim.SetTrigger("Death");
             CombatControl.Main.Finished = true;
             CombatControl.Main.Victory();
             //SoundtrackControl.Main.End();
@@ -403,10 +438,16 @@ namespace AEK
                 case PhaseChange.TutorialType.None:
                     break;
                 case PhaseChange.TutorialType.NormalAttack:
-                    CombatControl.Main.Tutorial1.SetTrigger("Play");
+                    if (CombatControl.Main.Tutorial1 != null)
+                    {
+                        CombatControl.Main.Tutorial1.SetTrigger("Play");
+                    }
                     break;
                 case PhaseChange.TutorialType.FocusedAttack:
-                    CombatControl.Main.Tutorial2.SetTrigger("Play");
+                    if (CombatControl.Main.Tutorial2 != null)
+                    {
+                        CombatControl.Main.Tutorial2.SetTrigger("Play");
+                    }
                     break;
                 case PhaseChange.TutorialType.StasisAttack:
                     CombatControl.Main.Tutorial3.SetTrigger("Play");
@@ -500,7 +541,11 @@ namespace AEK
         [Space]
         public float delayTilFirstAttack;
         public EnemyAttack firstAttackInPhase;
+
     }
+
+    
+
 
 
 

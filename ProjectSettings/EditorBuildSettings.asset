@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/LeoTestScene.unity
-    guid: 517d51d87876bd344af94478a64180ed
+    path: Assets/Scenes/Boss2.unity
+    guid: 1ebb089bdbf473948ae4ffd4054e16e9
   m_configObjects: {}

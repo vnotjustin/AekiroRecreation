@@ -18,6 +18,10 @@ public class ShowDetails : MonoBehaviour
 
     public TMP_Text title;
     public TMP_Text description;
+    [Space]
+    public Sprite equipSpr;
+    public Sprite unequipSpr;
+    public Image lockImage;
 
     public bool thisButton = false;
     // Start is called before the first frame update
@@ -39,48 +43,57 @@ public class ShowDetails : MonoBehaviour
 
         if(this.tag == "SwiftStrikes" && thisButton)
         {
-            title.text = "Swift Strikes";
-            description.text = "Increases light attack damage. Cost 1 crystal.";
+            title.text = "Swift Slashes";
+            description.text = "Slightly increases light attack damage. Cost 1 crystal.";
+            lockImage.sprite = GameManager.Main.SwiftStrikes ? unequipSpr : equipSpr;
         }
         if (this.tag == "BlessingZhang" && thisButton)
         {
-            title.text = "Blessing of Zhang Fei";
-            description.text = "Every 5th light attack now becomes a heavy attack. Costs 2 crystals.";
+            title.text = "Thundercloud";
+            description.text = "Every 5th light attack deals double damage. Costs 2 crystals.";
+            lockImage.sprite = GameManager.Main.BlessingZhang ? unequipSpr : equipSpr;
         }
         if (this.tag == "SwordGuan" && thisButton)
         {
-            title.text = "Sword of Guan Yu";
+            title.text = "Blade Dance";
             description.text = "Consecutive strikes deal slightly more damage with each attack. Costs 3 crystals.";
+            lockImage.sprite = GameManager.Main.SwordGuan ? unequipSpr : equipSpr;
         }
         if (this.tag == "StaggeringBlow" && thisButton)
         {
-            title.text = "Staggering Blow";
+            title.text = "Searing Blow";
             description.text = "Heavy attacks now do burn damage for 2 seconds. Costs 1 crystal.";
+            lockImage.sprite = GameManager.Main.StaggeringBlow ? unequipSpr : equipSpr;
         }
         if (this.tag == "PracticedSword" && thisButton)
         {
-            title.text = "Practiced Swordsman";
+            title.text = "Cobra Bites";
             description.text = "All attacks can now critically strike. Costs 2 crystals.";
+            lockImage.sprite = GameManager.Main.PracticedSword ? unequipSpr : equipSpr;
         }
         if (this.tag == "CrushingStrike" && thisButton)
         {
             title.text = "Crushing Strike";
-            description.text = "Dodge Strike increases damage from all other attacks for 5 seconds. Costs 3 crystals.";
+            description.text = "Dodge Strike increases damage from all other attacks for 3 seconds. Costs 3 crystals.";
+            lockImage.sprite = GameManager.Main.CrushingStrike ? unequipSpr : equipSpr;
         }
         if (this.tag == "QuickEvasion" && thisButton)
         {
             title.text = "Quick Evasion";
-            description.text = "Gain a brief moment of invulnerability after every input besides light attacks.  Costs 1 crystal.";
+            description.text = "Increases the window of time for dodges.  Costs 1 crystal.";
+            lockImage.sprite = GameManager.Main.QuickEvasion ? unequipSpr : equipSpr;
         }
         if (this.tag == "ProtectionofDivine" && thisButton)
         {
-            title.text = "Protection of the Divine";
+            title.text = "Divine Protection";
             description.text = "Start fight with shield that blocks first hit attack. Costs 2 crystals.";
+            lockImage.sprite = GameManager.Main.ProtectionofDivine ? unequipSpr : equipSpr;
         }
         if (this.tag == "Thornmail" && thisButton)
         {
             title.text = "Second Wind";
-            description.text = "Blocking 20 times will block the next hit attack. Costs 3 crystals.";
+            description.text = "Blocking 15 times without getting hit grants you a shield. Costs 3 crystals.";
+            lockImage.sprite = GameManager.Main.Thornmail ? unequipSpr : equipSpr;
         }
 
         if (thisButton)

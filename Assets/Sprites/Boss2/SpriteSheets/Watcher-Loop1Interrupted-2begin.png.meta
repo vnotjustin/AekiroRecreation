@@ -1,0 +1,394 @@
+fileFormatVersion: 2
+guid: 8db1ba1251f48b0429be92a6559496ad
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5749921399645611317
+    second: Watcher-Loop1Interrupted-2begin_0
+  - first:
+      213: -3891394036137800183
+    second: Watcher-Loop1Interrupted-2begin_1
+  - first:
+      213: 6081675486919073947
+    second: Watcher-Loop1Interrupted-2begin_2
+  - first:
+      213: -4531836571783369466
+    second: Watcher-Loop1Interrupted-2begin_3
+  - first:
+      213: -7125822781337418368
+    second: Watcher-Loop1Interrupted-2begin_4
+  - first:
+      213: 587651680148753556
+    second: Watcher-Loop1Interrupted-2begin_5
+  - first:
+      213: 8091183714454284545
+    second: Watcher-Loop1Interrupted-2begin_6
+  - first:
+      213: -5136761235229452237
+    second: Watcher-Loop1Interrupted-2begin_7
+  - first:
+      213: 5331155263973838504
+    second: Watcher-Loop1Interrupted-2begin_8
+  - first:
+      213: -5467451775318077405
+    second: Watcher-Loop1Interrupted-2begin_9
+  - first:
+      213: -3085125852271450204
+    second: Watcher-Loop1Interrupted-2begin_10
+  - first:
+      213: 3757741970419813194
+    second: Watcher-Loop1Interrupted-2begin_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted-2begin_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1619
+        width: 814
+        height: 517
+      alignment: 9
+      pivot: {x: 0.1480553, y: 0.10805938}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcad4bf83fc2430b0800000000000000
+      internalID: -5749921399645611317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted-2begin_1
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 1621
+        width: 772
+        height: 516
+      alignment: 9
+      pivot: {x: 0.15628605, y: 0.10460432}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90eceeaddbdfef9c0800000000000000
+      internalID: -3891394036137800183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted-2begin_2
+      rect:
+        serializedVersion: 2
+        x: 2405
+        y: 1626
+        width: 739
+        height: 511
+      alignment: 9
+      pivot: {x: 0.16402121, y: 0.095834754}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b90230d12a3766450800000000000000
+      internalID: 6081675486919073947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted-2begin_3
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1087
+        width: 730
+        height: 514
+      alignment: 9
+      pivot: {x: 0.16571583, y: 0.100201204}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d6abe06aeab11c0800000000000000
+      internalID: -4531836571783369466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted-2begin_4
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 1089
+        width: 739
+        height: 512
+      alignment: 9
+      pivot: {x: 0.16326764, y: 0.09487343}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0854ff14fedfb1d90800000000000000
+      internalID: -7125822781337418368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted-2begin_5
+      rect:
+        serializedVersion: 2
+        x: 2405
+        y: 1092
+        width: 742
+        height: 506
+      alignment: 9
+      pivot: {x: 0.16305105, y: 0.09091537}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49c8deee612c72800800000000000000
+      internalID: 587651680148753556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted-2begin_6
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 557
+        width: 772
+        height: 504
+      alignment: 9
+      pivot: {x: 0.15633859, y: 0.08583565}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109297828b8a94070800000000000000
+      internalID: 8091183714454284545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted-2begin_7
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 555
+        width: 801
+        height: 502
+      alignment: 9
+      pivot: {x: 0.15244205, y: 0.09093655}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 338d62e4fde86b8b0800000000000000
+      internalID: -5136761235229452237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted-2begin_8
+      rect:
+        serializedVersion: 2
+        x: 2405
+        y: 552
+        width: 834
+        height: 505
+      alignment: 9
+      pivot: {x: 0.14582895, y: 0.09780128}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae4d9787711cf940800000000000000
+      internalID: 5331155263973838504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted-2begin_9
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 17
+        width: 907
+        height: 503
+      alignment: 9
+      pivot: {x: 0.13269481, y: 0.09132699}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32056910495bf14b0800000000000000
+      internalID: -5467451775318077405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted-2begin_10
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 17
+        width: 1048
+        height: 502
+      alignment: 9
+      pivot: {x: 0.11514795, y: 0.09372521}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a76cff026e6f25d0800000000000000
+      internalID: -3085125852271450204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watcher-Loop1Interrupted-2begin_11
+      rect:
+        serializedVersion: 2
+        x: 2405
+        y: 15
+        width: 1179
+        height: 504
+      alignment: 9
+      pivot: {x: 0.10284884, y: 0.09646074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b0378a96e262430800000000000000
+      internalID: 3757741970419813194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
